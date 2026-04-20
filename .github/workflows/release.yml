@@ -49,10 +49,9 @@ jobs:
           import os, re, pathlib
           version = os.environ["VERSION"]
           p = pathlib.Path("pyproject.toml")
-          text = p.read_text(encoding="utf-8")
-          new = re.sub(r'^version = "[^"]+"', f'version = "{version}"', text, count=1, flags=re.MULTILINE)
-          if new == text:
-              raise SystemExit("failed to rewrite version in pyproject.toml")
+          new, n = re.subn(r'^version = "[^"]+"', f'version = "{version}"', p.read_text(encoding="utf-8"), count=1, flags=re.MULTILINE)
+          if n != 1:
+              raise SystemExit(f"expected 1 version line to rewrite in pyproject.toml, found {n}")
           p.write_text(new, encoding="utf-8")
           PY
         env:
