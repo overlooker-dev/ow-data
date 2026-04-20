@@ -1,0 +1,1961 @@
+[
+  {
+    "name": "Ana",
+    "slug": "ana",
+    "role": "support",
+    "subrole": "tactician",
+    "portrait": "hero_portraits/Ana.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Groggy",
+        "slug": "groggy",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/ana/groggy.png"
+      },
+      {
+        "name": "Speed Serum",
+        "slug": "speed_serum",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/ana/speed_serum.png"
+      },
+      {
+        "name": "Biotic Bounce",
+        "slug": "biotic_bounce",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/ana/biotic_bounce.png"
+      },
+      {
+        "name": "Headhunter",
+        "slug": "headhunter",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/ana/headhunter.png"
+      }
+    ]
+  },
+  {
+    "name": "Anran",
+    "slug": "anran",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Anran.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Smoulder",
+        "slug": "smoulder",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/anran/smoulder.png"
+      },
+      {
+        "name": "Heat Shield",
+        "slug": "heat_shield",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/anran/heat_shield.png"
+      },
+      {
+        "name": "Short Fuse",
+        "slug": "short_fuse",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/anran/short_fuse.png"
+      },
+      {
+        "name": "Hungering Blaze",
+        "slug": "hungering_blaze",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/anran/hungering_blaze.png"
+      }
+    ]
+  },
+  {
+    "name": "Ashe",
+    "slug": "ashe",
+    "role": "damage",
+    "subrole": "sharpshooter",
+    "portrait": "hero_portraits/Ashe.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Remote Detonator",
+        "slug": "remote_detonator",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/ashe/remote_detonator.png"
+      },
+      {
+        "name": "Double-Barreled",
+        "slug": "double_barreled",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/ashe/double_barreled.png"
+      },
+      {
+        "name": "Viper's Sting",
+        "slug": "viper_s_sting",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/ashe/viper_s_sting.png"
+      },
+      {
+        "name": "Airburst",
+        "slug": "airburst",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/ashe/airburst.png"
+      }
+    ]
+  },
+  {
+    "name": "Baptiste",
+    "slug": "baptiste",
+    "role": "support",
+    "subrole": "tactician",
+    "portrait": "hero_portraits/Baptiste.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Expanded Field",
+        "slug": "expanded_field",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/baptiste/expanded_field.png"
+      },
+      {
+        "name": "Assault Burst",
+        "slug": "assault_burst",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/baptiste/assault_burst.png"
+      },
+      {
+        "name": "Automated Healing",
+        "slug": "automated_healing",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/baptiste/automated_healing.png"
+      },
+      {
+        "name": "Rocket Boots",
+        "slug": "rocket_boots",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/baptiste/rocket_boots.png"
+      }
+    ]
+  },
+  {
+    "name": "Bastion",
+    "slug": "bastion",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Bastion.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Armored Artillery",
+        "slug": "armored_artillery",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/bastion/armored_artillery.png"
+      },
+      {
+        "name": "Configuration Reload",
+        "slug": "configuration_reload",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/bastion/configuration_reload.png"
+      },
+      {
+        "name": "Lindholm Explosives",
+        "slug": "lindholm_explosives",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/bastion/lindholm_explosives.png"
+      },
+      {
+        "name": "Self-Repair",
+        "slug": "self_repair",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/bastion/self_repair.png"
+      }
+    ]
+  },
+  {
+    "name": "Brigitte",
+    "slug": "brigitte",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Brigitte.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Combat Medic",
+        "slug": "combat_medic",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/brigitte/combat_medic.png"
+      },
+      {
+        "name": "Morale Boost",
+        "slug": "morale_boost",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/brigitte/morale_boost.png"
+      },
+      {
+        "name": "Inspiring Strike",
+        "slug": "inspiring_strike",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/brigitte/inspiring_strike.png"
+      },
+      {
+        "name": "Whiplash",
+        "slug": "whiplash",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/brigitte/whiplash.png"
+      }
+    ]
+  },
+  {
+    "name": "Cassidy",
+    "slug": "cassidy",
+    "role": "damage",
+    "subrole": "sharpshooter",
+    "portrait": "hero_portraits/Cassidy.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Bang Bang",
+        "slug": "bang_bang",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/cassidy/bang_bang.png"
+      },
+      {
+        "name": "Even The Odds",
+        "slug": "even_the_odds",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/cassidy/even_the_odds.png"
+      },
+      {
+        "name": "Rollin' Round-Up",
+        "slug": "rollin_round_up",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/cassidy/rollin_round_up.png"
+      },
+      {
+        "name": "Silver Bullet",
+        "slug": "silver_bullet",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/cassidy/silver_bullet.png"
+      }
+    ]
+  },
+  {
+    "name": "D.Va",
+    "slug": "dva",
+    "role": "tank",
+    "subrole": "initiator",
+    "portrait": "hero_portraits/DVa.png",
+    "aliases": [
+      "DVa",
+      "D Va"
+    ],
+    "perks": [
+      {
+        "name": "Bunny Power",
+        "slug": "bunny_power",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/dva/bunny_power.png"
+      },
+      {
+        "name": "Extended Boosters",
+        "slug": "extended_boosters",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/dva/extended_boosters.png"
+      },
+      {
+        "name": "Shield System",
+        "slug": "shield_system",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/dva/shield_system.png"
+      },
+      {
+        "name": "Precision Fusion",
+        "slug": "precision_fusion",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/dva/precision_fusion.png"
+      }
+    ]
+  },
+  {
+    "name": "Domina",
+    "slug": "domina",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/Domina.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Efficient Design",
+        "slug": "efficient_design",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/domina/efficient_design.png"
+      },
+      {
+        "name": "Extended Power",
+        "slug": "extended_power",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/domina/extended_power.png"
+      },
+      {
+        "name": "Disruptive Detonation",
+        "slug": "disruptive_detonation",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/domina/disruptive_detonation.png"
+      },
+      {
+        "name": "Power Move",
+        "slug": "power_move",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/domina/power_move.png"
+      }
+    ]
+  },
+  {
+    "name": "Doomfist",
+    "slug": "doomfist",
+    "role": "tank",
+    "subrole": "initiator",
+    "portrait": "hero_portraits/Doomfist.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "One-Two",
+        "slug": "one_two",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/doomfist/one_two.png"
+      },
+      {
+        "name": "Survival of the Fittest",
+        "slug": "survival_of_the_fittest",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/doomfist/survival_of_the_fittest.png"
+      },
+      {
+        "name": "Aftershock",
+        "slug": "aftershock",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/doomfist/aftershock.png"
+      },
+      {
+        "name": "Power Matrix",
+        "slug": "power_matrix",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/doomfist/power_matrix.png"
+      }
+    ]
+  },
+  {
+    "name": "Echo",
+    "slug": "echo",
+    "role": "damage",
+    "subrole": "recon",
+    "portrait": "hero_portraits/Echo.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Focused Rush",
+        "slug": "focused_rush",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/echo/focused_rush.png"
+      },
+      {
+        "name": "Partial Scan",
+        "slug": "partial_scan",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/echo/partial_scan.png"
+      },
+      {
+        "name": "Full Salvo",
+        "slug": "full_salvo",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/echo/full_salvo.png"
+      },
+      {
+        "name": "High Beams",
+        "slug": "high_beams",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/echo/high_beams.png"
+      }
+    ]
+  },
+  {
+    "name": "Emre",
+    "slug": "emre",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Emre.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Suppressive Security",
+        "slug": "suppressive_security",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/emre/suppressive_security.png"
+      },
+      {
+        "name": "Enhanced Agility",
+        "slug": "enhanced_agility",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/emre/enhanced_agility.png"
+      },
+      {
+        "name": "Heat Sink",
+        "slug": "heat_sink",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/emre/heat_sink.png"
+      },
+      {
+        "name": "Cyber Adhesion",
+        "slug": "cyber_adhesion",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/emre/cyber_adhesion.png"
+      }
+    ]
+  },
+  {
+    "name": "Freja",
+    "slug": "freja",
+    "role": "damage",
+    "subrole": "recon",
+    "portrait": "hero_portraits/Freja.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Relentless Barrage",
+        "slug": "relentless_barrage",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/freja/relentless_barrage.png"
+      },
+      {
+        "name": "Momentum Boost",
+        "slug": "momentum_boost",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/freja/momentum_boost.png"
+      },
+      {
+        "name": "Aerial Recovery",
+        "slug": "aerial_recovery",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/freja/aerial_recovery.png"
+      },
+      {
+        "name": "Rising Winds",
+        "slug": "rising_winds",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/freja/rising_winds.png"
+      }
+    ]
+  },
+  {
+    "name": "Genji",
+    "slug": "genji",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Genji.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Swift Cuts",
+        "slug": "swift_cuts",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/genji/swift_cuts.png"
+      },
+      {
+        "name": "Dragon's Thirst",
+        "slug": "dragon_s_thirst",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/genji/dragon_s_thirst.png"
+      },
+      {
+        "name": "Blade Twisting",
+        "slug": "blade_twisting",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/genji/blade_twisting.png"
+      },
+      {
+        "name": "Meditation",
+        "slug": "meditation",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/genji/meditation.png"
+      }
+    ]
+  },
+  {
+    "name": "Hanzo",
+    "slug": "hanzo",
+    "role": "damage",
+    "subrole": "sharpshooter",
+    "portrait": "hero_portraits/Hanzo.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Sonic Disruption",
+        "slug": "sonic_disruption",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/hanzo/sonic_disruption.png"
+      },
+      {
+        "name": "Dragon Fury",
+        "slug": "dragon_fury",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/hanzo/dragon_fury.png"
+      },
+      {
+        "name": "Frost Arrow",
+        "slug": "frost_arrow",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/hanzo/frost_arrow.png"
+      },
+      {
+        "name": "Scatter Arrows",
+        "slug": "scatter_arrows",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/hanzo/scatter_arrows.png"
+      }
+    ]
+  },
+  {
+    "name": "Hazard",
+    "slug": "hazard",
+    "role": "tank",
+    "subrole": "initiator",
+    "portrait": "hero_portraits/Hazard.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Deep Leap",
+        "slug": "deep_leap",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/hazard/deep_leap.png"
+      },
+      {
+        "name": "Anarchic Zeal",
+        "slug": "anarchic_zeal",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/hazard/anarchic_zeal.png"
+      },
+      {
+        "name": "Reconstitution",
+        "slug": "reconstitution",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/hazard/reconstitution.png"
+      },
+      {
+        "name": "Explosive Impalements",
+        "slug": "explosive_impalements",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/hazard/explosive_impalements.png"
+      }
+    ]
+  },
+  {
+    "name": "Illari",
+    "slug": "illari",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Illari.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Rapid Construction",
+        "slug": "rapid_construction",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/illari/rapid_construction.png"
+      },
+      {
+        "name": "Summer Solstice",
+        "slug": "summer_solstice",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/illari/summer_solstice.png"
+      },
+      {
+        "name": "Solar Flare",
+        "slug": "solar_flare",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/illari/solar_flare.png"
+      },
+      {
+        "name": "Sunburn",
+        "slug": "sunburn",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/illari/sunburn.png"
+      }
+    ]
+  },
+  {
+    "name": "Jetpack Cat",
+    "slug": "jetpack_cat",
+    "role": "support",
+    "subrole": "tactician",
+    "portrait": "hero_portraits/Jetpack_Cat.png",
+    "aliases": [
+      "Jetpack_Cat",
+      "JetpackCat"
+    ],
+    "perks": [
+      {
+        "name": "Ulterior Motive",
+        "slug": "ulterior_motive",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/jetpack_cat/ulterior_motive.png"
+      },
+      {
+        "name": "Transport Shielding",
+        "slug": "transport_shielding",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/jetpack_cat/transport_shielding.png"
+      },
+      {
+        "name": "Headbutt",
+        "slug": "headbutt",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/jetpack_cat/headbutt.png"
+      },
+      {
+        "name": "Claws Out",
+        "slug": "claws_out",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/jetpack_cat/claws_out.png"
+      }
+    ]
+  },
+  {
+    "name": "Junker Queen",
+    "slug": "junker_queen",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/Junker_Queen.png",
+    "aliases": [
+      "Junker_Queen",
+      "JunkerQueen"
+    ],
+    "perks": [
+      {
+        "name": "Rampant Charge",
+        "slug": "rampant_charge",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/junker_queen/rampant_charge.png"
+      },
+      {
+        "name": "Battle Shout",
+        "slug": "battle_shout",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/junker_queen/battle_shout.png"
+      },
+      {
+        "name": "Willy-Willy",
+        "slug": "willy_willy",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/junker_queen/willy_willy.png"
+      },
+      {
+        "name": "Savage Satiation",
+        "slug": "savage_satiation",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/junker_queen/savage_satiation.png"
+      }
+    ]
+  },
+  {
+    "name": "Junkrat",
+    "slug": "junkrat",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Junkrat.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Nitro Boost",
+        "slug": "nitro_boost",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/junkrat/nitro_boost.png"
+      },
+      {
+        "name": "Bomb Voyage",
+        "slug": "bomb_voyage",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/junkrat/bomb_voyage.png"
+      },
+      {
+        "name": "Mine Recycling",
+        "slug": "mine_recycling",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/junkrat/mine_recycling.png"
+      },
+      {
+        "name": "Frag Cannon",
+        "slug": "frag_cannon",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/junkrat/frag_cannon.png"
+      }
+    ]
+  },
+  {
+    "name": "Juno",
+    "slug": "juno",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Juno.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Familiar Vitals",
+        "slug": "familiar_vitals",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/juno/familiar_vitals.png"
+      },
+      {
+        "name": "Locked On",
+        "slug": "locked_on",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/juno/locked_on.png"
+      },
+      {
+        "name": "Lift Off",
+        "slug": "lift_off",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/juno/lift_off.png"
+      },
+      {
+        "name": "Faster Blaster",
+        "slug": "faster_blaster",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/juno/faster_blaster.png"
+      }
+    ]
+  },
+  {
+    "name": "Kiriko",
+    "slug": "kiriko",
+    "role": "support",
+    "subrole": "medic",
+    "portrait": "hero_portraits/Kiriko.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Urgent Care",
+        "slug": "urgent_care",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/kiriko/urgent_care.png"
+      },
+      {
+        "name": "Fortune Teller",
+        "slug": "fortune_teller",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/kiriko/fortune_teller.png"
+      },
+      {
+        "name": "Ready Step",
+        "slug": "ready_step",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/kiriko/ready_step.png"
+      },
+      {
+        "name": "Foxtrot",
+        "slug": "foxtrot",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/kiriko/foxtrot.png"
+      }
+    ]
+  },
+  {
+    "name": "Lifeweaver",
+    "slug": "lifeweaver",
+    "role": "support",
+    "subrole": "medic",
+    "portrait": "hero_portraits/Lifeweaver.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Petal Protection",
+        "slug": "petal_protection",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/lifeweaver/petal_protection.png"
+      },
+      {
+        "name": "Dashing Escape",
+        "slug": "dashing_escape",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/lifeweaver/dashing_escape.png"
+      },
+      {
+        "name": "Sow the Seed",
+        "slug": "sow_the_seed",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/lifeweaver/sow_the_seed.png"
+      },
+      {
+        "name": "Superbloom",
+        "slug": "superbloom",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/lifeweaver/superbloom.png"
+      }
+    ]
+  },
+  {
+    "name": "Lúcio",
+    "slug": "lucio",
+    "role": "support",
+    "subrole": "tactician",
+    "portrait": "hero_portraits/Lucio.png",
+    "aliases": [
+      "Lucio"
+    ],
+    "perks": [
+      {
+        "name": "Soundwave Rider",
+        "slug": "soundwave_rider",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/lucio/soundwave_rider.png"
+      },
+      {
+        "name": "Beat Drop",
+        "slug": "beat_drop",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/lucio/beat_drop.png"
+      },
+      {
+        "name": "Noise Violation",
+        "slug": "noise_violation",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/lucio/noise_violation.png"
+      },
+      {
+        "name": "Accelerando",
+        "slug": "accelerando",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/lucio/accelerando.png"
+      }
+    ]
+  },
+  {
+    "name": "Mauga",
+    "slug": "mauga",
+    "role": "tank",
+    "subrole": "bruiser",
+    "portrait": "hero_portraits/Mauga.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Kinetic Bandolier",
+        "slug": "kinetic_bandolier",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/mauga/kinetic_bandolier.png"
+      },
+      {
+        "name": "Pyromaniac",
+        "slug": "pyromaniac",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/mauga/pyromaniac.png"
+      },
+      {
+        "name": "Firewalker",
+        "slug": "firewalker",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/mauga/firewalker.png"
+      },
+      {
+        "name": "Combat Fuel",
+        "slug": "combat_fuel",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/mauga/combat_fuel.png"
+      }
+    ]
+  },
+  {
+    "name": "Mei",
+    "slug": "mei",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Mei.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Skating Rink",
+        "slug": "skating_rink",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/mei/skating_rink.png"
+      },
+      {
+        "name": "Glacial Propulsion",
+        "slug": "glacial_propulsion",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/mei/glacial_propulsion.png"
+      },
+      {
+        "name": "Deep Freeze",
+        "slug": "deep_freeze",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/mei/deep_freeze.png"
+      },
+      {
+        "name": "Cryo-Storm",
+        "slug": "cryo_storm",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/mei/cryo_storm.png"
+      }
+    ]
+  },
+  {
+    "name": "Mercy",
+    "slug": "mercy",
+    "role": "support",
+    "subrole": "medic",
+    "portrait": "hero_portraits/Mercy.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Angelic Resurrection",
+        "slug": "angelic_resurrection",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/mercy/angelic_resurrection.png"
+      },
+      {
+        "name": "Divine Momentum",
+        "slug": "divine_momentum",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/mercy/divine_momentum.png"
+      },
+      {
+        "name": "Chain Boost",
+        "slug": "chain_boost",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/mercy/chain_boost.png"
+      },
+      {
+        "name": "Double Dose",
+        "slug": "double_dose",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/mercy/double_dose.png"
+      }
+    ]
+  },
+  {
+    "name": "Mizuki",
+    "slug": "mizuki",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Mizuki.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Wellspring",
+        "slug": "wellspring",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/mizuki/wellspring.png"
+      },
+      {
+        "name": "Exposed Soul",
+        "slug": "exposed_soul",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/mizuki/exposed_soul.png"
+      },
+      {
+        "name": "Resonant Return",
+        "slug": "resonant_return",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/mizuki/resonant_return.png"
+      },
+      {
+        "name": "Quickstep",
+        "slug": "quickstep",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/mizuki/quickstep.png"
+      }
+    ]
+  },
+  {
+    "name": "Moira",
+    "slug": "moira",
+    "role": "support",
+    "subrole": "medic",
+    "portrait": "hero_portraits/Moira.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Destruction's Divide",
+        "slug": "destruction_s_divide",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/moira/destruction_s_divide.png"
+      },
+      {
+        "name": "Ethical Nourishment",
+        "slug": "ethical_nourishment",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/moira/ethical_nourishment.png"
+      },
+      {
+        "name": "Reversal",
+        "slug": "reversal",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/moira/reversal.png"
+      },
+      {
+        "name": "Phantom Step",
+        "slug": "phantom_step",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/moira/phantom_step.png"
+      }
+    ]
+  },
+  {
+    "name": "Orisa",
+    "slug": "orisa",
+    "role": "tank",
+    "subrole": "bruiser",
+    "portrait": "hero_portraits/Orisa.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Defense Protocol",
+        "slug": "defense_protocol",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/orisa/defense_protocol.png"
+      },
+      {
+        "name": "Mobile Fortification",
+        "slug": "mobile_fortification",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/orisa/mobile_fortification.png"
+      },
+      {
+        "name": "Charged Javelin",
+        "slug": "charged_javelin",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/orisa/charged_javelin.png"
+      },
+      {
+        "name": "Protective Barrier",
+        "slug": "protective_barrier",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/orisa/protective_barrier.png"
+      }
+    ]
+  },
+  {
+    "name": "Pharah",
+    "slug": "pharah",
+    "role": "damage",
+    "subrole": "recon",
+    "portrait": "hero_portraits/Pharah.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Concussive Force",
+        "slug": "concussive_force",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/pharah/concussive_force.png"
+      },
+      {
+        "name": "Helix Shields",
+        "slug": "helix_shields",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/pharah/helix_shields.png"
+      },
+      {
+        "name": "Fuel Stores",
+        "slug": "fuel_stores",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/pharah/fuel_stores.png"
+      },
+      {
+        "name": "Rocket Salvo",
+        "slug": "rocket_salvo",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/pharah/rocket_salvo.png"
+      }
+    ]
+  },
+  {
+    "name": "Ramattra",
+    "slug": "ramattra",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/Ramattra.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Relentless Form",
+        "slug": "relentless_form",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/ramattra/relentless_form.png"
+      },
+      {
+        "name": "Prolonged Barrier",
+        "slug": "prolonged_barrier",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/ramattra/prolonged_barrier.png"
+      },
+      {
+        "name": "Void Surge",
+        "slug": "void_surge",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/ramattra/void_surge.png"
+      },
+      {
+        "name": "Nanite Repair",
+        "slug": "nanite_repair",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/ramattra/nanite_repair.png"
+      }
+    ]
+  },
+  {
+    "name": "Reaper",
+    "slug": "reaper",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Reaper.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Soul Reaving",
+        "slug": "soul_reaving",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/reaper/soul_reaving.png"
+      },
+      {
+        "name": "Lingering Wraith",
+        "slug": "lingering_wraith",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/reaper/lingering_wraith.png"
+      },
+      {
+        "name": "Shadow Blink",
+        "slug": "shadow_blink",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/reaper/shadow_blink.png"
+      },
+      {
+        "name": "Trigger Finger",
+        "slug": "trigger_finger",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/reaper/trigger_finger.png"
+      }
+    ]
+  },
+  {
+    "name": "Reinhardt",
+    "slug": "reinhardt",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/Reinhardt.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Crusader's Fire",
+        "slug": "crusader_s_fire",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/reinhardt/crusader_s_fire.png"
+      },
+      {
+        "name": "Crusader's Resolve",
+        "slug": "crusader_s_resolve",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/reinhardt/crusader_s_resolve.png"
+      },
+      {
+        "name": "Shield Slam",
+        "slug": "shield_slam",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/reinhardt/shield_slam.png"
+      },
+      {
+        "name": "Ignited Fury",
+        "slug": "ignited_fury",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/reinhardt/ignited_fury.png"
+      }
+    ]
+  },
+  {
+    "name": "Roadhog",
+    "slug": "roadhog",
+    "role": "tank",
+    "subrole": "bruiser",
+    "portrait": "hero_portraits/Roadhog.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Scrap Hook",
+        "slug": "scrap_hook",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/roadhog/scrap_hook.png"
+      },
+      {
+        "name": "Shrapnel Launcher",
+        "slug": "shrapnel_launcher",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/roadhog/shrapnel_launcher.png"
+      },
+      {
+        "name": "Hogdrogen Exposure",
+        "slug": "hogdrogen_exposure",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/roadhog/hogdrogen_exposure.png"
+      },
+      {
+        "name": "Pulled Pork",
+        "slug": "pulled_pork",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/roadhog/pulled_pork.png"
+      }
+    ]
+  },
+  {
+    "name": "Sierra",
+    "slug": "sierra",
+    "role": "damage",
+    "subrole": "recon",
+    "portrait": "hero_portraits/Sierra.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Full Flight",
+        "slug": "full_flight",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/sierra/full_flight.png"
+      },
+      {
+        "name": "Tight Grip",
+        "slug": "tight_grip",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/sierra/tight_grip.png"
+      },
+      {
+        "name": "Medi-Drone",
+        "slug": "medi_drone",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/sierra/medi_drone.png"
+      },
+      {
+        "name": "Locked In",
+        "slug": "locked_in",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/sierra/locked_in.png"
+      }
+    ]
+  },
+  {
+    "name": "Sigma",
+    "slug": "sigma",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/Sigma.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Kinetic Cycle",
+        "slug": "kinetic_cycle",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/sigma/kinetic_cycle.png"
+      },
+      {
+        "name": "Hyper Regeneration",
+        "slug": "hyper_regeneration",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/sigma/hyper_regeneration.png"
+      },
+      {
+        "name": "Hyper Strike",
+        "slug": "hyper_strike",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/sigma/hyper_strike.png"
+      },
+      {
+        "name": "Levitation",
+        "slug": "levitation",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/sigma/levitation.png"
+      }
+    ]
+  },
+  {
+    "name": "Sojourn",
+    "slug": "sojourn",
+    "role": "damage",
+    "subrole": "sharpshooter",
+    "portrait": "hero_portraits/Sojourn.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Overcharged",
+        "slug": "overcharged",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/sojourn/overcharged.png"
+      },
+      {
+        "name": "Deceleration Field",
+        "slug": "deceleration_field",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/sojourn/deceleration_field.png"
+      },
+      {
+        "name": "Friction Generators",
+        "slug": "friction_generators",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/sojourn/friction_generators.png"
+      },
+      {
+        "name": "Dual Thrusters",
+        "slug": "dual_thrusters",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/sojourn/dual_thrusters.png"
+      }
+    ]
+  },
+  {
+    "name": "Soldier: 76",
+    "slug": "soldier_76",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Soldier_76.png",
+    "aliases": [
+      "Soldier 76",
+      "Soldier_76",
+      "Soldier76",
+      "Soldier-76"
+    ],
+    "perks": [
+      {
+        "name": "Helix Propulsion",
+        "slug": "helix_propulsion",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/soldier_76/helix_propulsion.png"
+      },
+      {
+        "name": "Tactical Salvo",
+        "slug": "tactical_salvo",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/soldier_76/tactical_salvo.png"
+      },
+      {
+        "name": "Full Stride",
+        "slug": "full_stride",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/soldier_76/full_stride.png"
+      },
+      {
+        "name": "Stim Pack",
+        "slug": "stim_pack",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/soldier_76/stim_pack.png"
+      }
+    ]
+  },
+  {
+    "name": "Sombra",
+    "slug": "sombra",
+    "role": "damage",
+    "subrole": "recon",
+    "portrait": "hero_portraits/Sombra.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Encrypted Upload",
+        "slug": "encrypted_upload",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/sombra/encrypted_upload.png"
+      },
+      {
+        "name": "CTRL ALT ESC",
+        "slug": "ctrl_alt_esc",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/sombra/ctrl_alt_esc.png"
+      },
+      {
+        "name": "High-Speed Bandwidth",
+        "slug": "high_speed_bandwidth",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/sombra/high_speed_bandwidth.png"
+      },
+      {
+        "name": "Viral Replication",
+        "slug": "viral_replication",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/sombra/viral_replication.png"
+      }
+    ]
+  },
+  {
+    "name": "Symmetra",
+    "slug": "symmetra",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Symmetra.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Sentry Capacity",
+        "slug": "sentry_capacity",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/symmetra/sentry_capacity.png"
+      },
+      {
+        "name": "Perfect Alignment",
+        "slug": "perfect_alignment",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/symmetra/perfect_alignment.png"
+      },
+      {
+        "name": "Hovering Barrier",
+        "slug": "hovering_barrier",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/symmetra/hovering_barrier.png"
+      },
+      {
+        "name": "Shield Battery",
+        "slug": "shield_battery",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/symmetra/shield_battery.png"
+      }
+    ]
+  },
+  {
+    "name": "Torbjörn",
+    "slug": "torbjorn",
+    "role": "damage",
+    "subrole": "specialist",
+    "portrait": "hero_portraits/Torbjorn.png",
+    "aliases": [
+      "Torbjorn"
+    ],
+    "perks": [
+      {
+        "name": "Hammer Time",
+        "slug": "hammer_time",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/torbjorn/hammer_time.png"
+      },
+      {
+        "name": "Pre-Heated",
+        "slug": "pre_heated",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/torbjorn/pre_heated.png"
+      },
+      {
+        "name": "Anchor Bolts",
+        "slug": "anchor_bolts",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/torbjorn/anchor_bolts.png"
+      },
+      {
+        "name": "Overloaded Turret",
+        "slug": "overloaded_turret",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/torbjorn/overloaded_turret.png"
+      }
+    ]
+  },
+  {
+    "name": "Tracer",
+    "slug": "tracer",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Tracer.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Chronal Dash",
+        "slug": "chronal_dash",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/tracer/chronal_dash.png"
+      },
+      {
+        "name": "Kinetic Reload",
+        "slug": "kinetic_reload",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/tracer/kinetic_reload.png"
+      },
+      {
+        "name": "Blink Packs",
+        "slug": "blink_packs",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/tracer/blink_packs.png"
+      },
+      {
+        "name": "Quantum Entanglement",
+        "slug": "quantum_entanglement",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/tracer/quantum_entanglement.png"
+      }
+    ]
+  },
+  {
+    "name": "Vendetta",
+    "slug": "vendetta",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Vendetta.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Extra Edge",
+        "slug": "extra_edge",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/vendetta/extra_edge.png"
+      },
+      {
+        "name": "Raging Storm",
+        "slug": "raging_storm",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/vendetta/raging_storm.png"
+      },
+      {
+        "name": "Siphoning Strike",
+        "slug": "siphoning_strike",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/vendetta/siphoning_strike.png"
+      },
+      {
+        "name": "Relentless",
+        "slug": "relentless",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/vendetta/relentless.png"
+      }
+    ]
+  },
+  {
+    "name": "Venture",
+    "slug": "venture",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Venture.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Deep Burrow",
+        "slug": "deep_burrow",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/venture/deep_burrow.png"
+      },
+      {
+        "name": "Excavation Exhilaration",
+        "slug": "excavation_exhilaration",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/venture/excavation_exhilaration.png"
+      },
+      {
+        "name": "SMART Extender",
+        "slug": "smart_extender",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/venture/smart_extender.png"
+      },
+      {
+        "name": "Covered In Dirt",
+        "slug": "covered_in_dirt",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/venture/covered_in_dirt.png"
+      }
+    ]
+  },
+  {
+    "name": "Widowmaker",
+    "slug": "widowmaker",
+    "role": "damage",
+    "subrole": "sharpshooter",
+    "portrait": "hero_portraits/Widowmaker.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Scoped Efficiency",
+        "slug": "scoped_efficiency",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/widowmaker/scoped_efficiency.png"
+      },
+      {
+        "name": "Sniper's Instinct",
+        "slug": "sniper_s_instinct",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/widowmaker/sniper_s_instinct.png"
+      },
+      {
+        "name": "Seeker Mine",
+        "slug": "seeker_mine",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/widowmaker/seeker_mine.png"
+      },
+      {
+        "name": "Widow's Bite",
+        "slug": "widow_s_bite",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/widowmaker/widow_s_bite.png"
+      }
+    ]
+  },
+  {
+    "name": "Winston",
+    "slug": "winston",
+    "role": "tank",
+    "subrole": "initiator",
+    "portrait": "hero_portraits/Winston.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Electric Charge",
+        "slug": "electric_charge",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/winston/electric_charge.png"
+      },
+      {
+        "name": "Heavy Landing",
+        "slug": "heavy_landing",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/winston/heavy_landing.png"
+      },
+      {
+        "name": "Chain Lightning",
+        "slug": "chain_lightning",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/winston/chain_lightning.png"
+      },
+      {
+        "name": "Revitalizing Barrier",
+        "slug": "revitalizing_barrier",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/winston/revitalizing_barrier.png"
+      }
+    ]
+  },
+  {
+    "name": "Wrecking Ball",
+    "slug": "wrecking_ball",
+    "role": "tank",
+    "subrole": "initiator",
+    "portrait": "hero_portraits/Wrecking_Ball.png",
+    "aliases": [
+      "Wrecking_Ball",
+      "WreckingBall"
+    ],
+    "perks": [
+      {
+        "name": "Steamroller",
+        "slug": "steamroller",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/wrecking_ball/steamroller.png"
+      },
+      {
+        "name": "Multi-Ball",
+        "slug": "multi_ball",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/wrecking_ball/multi_ball.png"
+      },
+      {
+        "name": "Hang Time",
+        "slug": "hang_time",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/wrecking_ball/hang_time.png"
+      },
+      {
+        "name": "Adaptive Barrier",
+        "slug": "adaptive_barrier",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/wrecking_ball/adaptive_barrier.png"
+      }
+    ]
+  },
+  {
+    "name": "Wuyang",
+    "slug": "wuyang",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Wuyang.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Overflow",
+        "slug": "overflow",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/wuyang/overflow.png"
+      },
+      {
+        "name": "Balance",
+        "slug": "balance",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/wuyang/balance.png"
+      },
+      {
+        "name": "Ebb and Flow",
+        "slug": "ebb_and_flow",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/wuyang/ebb_and_flow.png"
+      },
+      {
+        "name": "Falling Rain",
+        "slug": "falling_rain",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/wuyang/falling_rain.png"
+      }
+    ]
+  },
+  {
+    "name": "Zarya",
+    "slug": "zarya",
+    "role": "tank",
+    "subrole": "bruiser",
+    "portrait": "hero_portraits/Zarya.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Jump-Ups",
+        "slug": "jump_ups",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/zarya/jump_ups.png"
+      },
+      {
+        "name": "Spotter",
+        "slug": "spotter",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/zarya/spotter.png"
+      },
+      {
+        "name": "Extra Oomph",
+        "slug": "extra_oomph",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/zarya/extra_oomph.png"
+      },
+      {
+        "name": "Energy Lance",
+        "slug": "energy_lance",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/zarya/energy_lance.png"
+      }
+    ]
+  },
+  {
+    "name": "Zenyatta",
+    "slug": "zenyatta",
+    "role": "support",
+    "subrole": "tactician",
+    "portrait": "hero_portraits/Zenyatta.png",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Discordant Repair",
+        "slug": "discordant_repair",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/zenyatta/discordant_repair.png"
+      },
+      {
+        "name": "Ascendance",
+        "slug": "ascendance",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/zenyatta/ascendance.png"
+      },
+      {
+        "name": "Focused Destruction",
+        "slug": "focused_destruction",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/zenyatta/focused_destruction.png"
+      },
+      {
+        "name": "Dual Harmony",
+        "slug": "dual_harmony",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/zenyatta/dual_harmony.png"
+      }
+    ]
+  }
+]

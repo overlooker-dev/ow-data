@@ -1,0 +1,17 @@
+node_modules/
+dist/
+python-dist/
+*.tsbuildinfo
+
+__pycache__/
+*.py[cod]
+.venv/
+build/
+*.egg-info/
+
+.npmrc
+.env
+.env.*
+
+.DS_Store
+Thumbs.db
