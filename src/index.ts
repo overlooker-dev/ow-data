@@ -1,11 +1,5 @@
-import { fileURLToPath } from "node:url";
-import { dirname, resolve } from "node:path";
-import { readFileSync } from "node:fs";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-// Package root — one level up from dist/ at runtime, or current dir during `tsc --watch`.
-const packageRoot = resolve(__dirname, "..");
+import heroesJson from "../heroes.json" with { type: "json" };
+import mapsJson from "../maps.json" with { type: "json" };
 
 export type Role = "tank" | "damage" | "support";
 export type PerkTier = "minor" | "major";
@@ -49,14 +43,8 @@ export interface GameMap {
   aliases: string[];
 }
 
-// Loaded eagerly so consumers can `import { heroes } from "@lunavod/ow-data"` synchronously.
-export const heroes: Hero[] = JSON.parse(
-  readFileSync(resolve(packageRoot, "heroes.json"), "utf-8"),
-);
-
-export const maps: GameMap[] = JSON.parse(
-  readFileSync(resolve(packageRoot, "maps.json"), "utf-8"),
-);
+export const heroes: Hero[] = heroesJson as Hero[];
+export const maps: GameMap[] = mapsJson as GameMap[];
 
 export const ALL_HERO_NAMES: string[] = heroes.map((h) => h.name);
 export const ALL_MAP_NAMES: string[] = maps.map((m) => m.name);
@@ -87,9 +75,4 @@ export function normalizeHeroName(input: string): string | undefined {
 
 export function normalizeMapName(input: string): string | undefined {
   return _mapLookup.get(input.toLowerCase())?.name;
-}
-
-/** Absolute filesystem path to a packaged asset (e.g., "hero_portraits/DVa.png"). */
-export function assetPath(relativePath: string): string {
-  return resolve(packageRoot, relativePath);
 }
