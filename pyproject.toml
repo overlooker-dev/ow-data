@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ow-data"
-version = "0.0.1"
+version = "0.0.3"
 description = "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons."
 readme = "CLAUDE.md"
 requires-python = ">=3.10"

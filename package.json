@@ -1,6 +1,6 @@
 {
   "name": "@lunavod/ow-data",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons.",
   "type": "module",
   "main": "./dist/index.js",
@@ -8,11 +8,13 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./node": {
       "types": "./dist/node.d.ts",
-      "import": "./dist/node.js"
+      "import": "./dist/node.js",
+      "default": "./dist/node.js"
     },
     "./heroes.json": "./heroes.json",
     "./maps.json": "./maps.json"
