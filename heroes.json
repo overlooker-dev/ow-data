@@ -1018,7 +1018,16 @@
         "slug": "divine_momentum",
         "tier": "minor",
         "slot": 2,
-        "icon": "perks/mercy/divine_momentum.png"
+        "icon": "perks/mercy/divine_momentum.png",
+        "removed_on": "2026-05-12"
+      },
+      {
+        "name": "Winged Reach",
+        "slug": "winged_reach",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/mercy/winged_reach.png",
+        "added_on": "2026-05-12"
       },
       {
         "name": "Chain Boost",

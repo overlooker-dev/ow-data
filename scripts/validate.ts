@@ -14,6 +14,8 @@ interface Perk {
   tier: "minor" | "major";
   slot: 1 | 2 | 3 | 4;
   icon: string;
+  added_on?: string;
+  removed_on?: string;
 }
 interface Hero {
   name: string;
@@ -43,6 +45,11 @@ const VALID_MODES = new Set([
 
 const errors: string[] = [];
 const err = (msg: string): void => { errors.push(msg); };
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const today = new Date().toISOString().slice(0, 10);
+const NEG_INF = "0000-00-00";
+const POS_INF = "9999-99-99";
 
 const referencedPortraits = new Set<string>();
 const referencedIcons = new Set<string>();
@@ -79,35 +86,66 @@ for (const h of heroes) {
     }
   }
 
-  if (h.perks.length !== 4) {
-    err(`hero "${h.slug}": has ${h.perks.length} perks, expected 4`);
-  }
-
   const perkSlugs = new Set<string>();
-  const slotSeen = new Map<number, string>();
+  const bySlot = new Map<number, Perk[]>();
   for (const p of h.perks) {
-    if (perkSlugs.has(p.slug)) err(`hero "${h.slug}": duplicate perk slug "${p.slug}"`);
+    if (perkSlugs.has(p.slug)) err(`hero "${h.slug}": duplicate perk slug "${p.slug}" (slugs are unique across history — never reuse)`);
     perkSlugs.add(p.slug);
-
-    if (slotSeen.has(p.slot)) {
-      err(`hero "${h.slug}": slot ${p.slot} used by both "${slotSeen.get(p.slot)}" and "${p.slug}"`);
-    } else {
-      slotSeen.set(p.slot, p.slug);
-    }
 
     const expectedTier = p.slot <= 2 ? "minor" : "major";
     if (p.tier !== expectedTier) {
       err(`hero "${h.slug}": perk "${p.slug}" slot ${p.slot} has tier "${p.tier}", expected "${expectedTier}"`);
     }
 
+    if (p.added_on !== undefined && !ISO_DATE.test(p.added_on)) {
+      err(`hero "${h.slug}": perk "${p.slug}" added_on "${p.added_on}" is not ISO YYYY-MM-DD`);
+    }
+    if (p.removed_on !== undefined && !ISO_DATE.test(p.removed_on)) {
+      err(`hero "${h.slug}": perk "${p.slug}" removed_on "${p.removed_on}" is not ISO YYYY-MM-DD`);
+    }
+    if (p.added_on && p.removed_on && p.added_on >= p.removed_on) {
+      err(`hero "${h.slug}": perk "${p.slug}" added_on "${p.added_on}" must be before removed_on "${p.removed_on}"`);
+    }
+
     if (!existsSync(resolve(repoRoot, p.icon))) {
       err(`hero "${h.slug}": missing perk icon ${p.icon}`);
     }
     referencedIcons.add(p.icon);
+
+    if (!bySlot.has(p.slot)) bySlot.set(p.slot, []);
+    bySlot.get(p.slot)!.push(p);
   }
 
+  // Per-slot lifecycle: active windows must not overlap, and exactly one must be
+  // currently active (no removed_on, added_on <= today).
   for (const slot of [1, 2, 3, 4]) {
-    if (!slotSeen.has(slot)) err(`hero "${h.slug}": missing perk for slot ${slot}`);
+    const perks = bySlot.get(slot) ?? [];
+    if (perks.length === 0) {
+      err(`hero "${h.slug}": no perks ever defined for slot ${slot}`);
+      continue;
+    }
+
+    const sorted = [...perks].sort(
+      (a, b) => (a.added_on ?? NEG_INF).localeCompare(b.added_on ?? NEG_INF),
+    );
+    for (let i = 1; i < sorted.length; i++) {
+      const prev = sorted[i - 1]!;
+      const curr = sorted[i]!;
+      const prevEnd = prev.removed_on ?? POS_INF;
+      const currStart = curr.added_on ?? NEG_INF;
+      if (prevEnd > currStart) {
+        err(`hero "${h.slug}": slot ${slot} perks "${prev.slug}" and "${curr.slug}" have overlapping active windows`);
+      }
+    }
+
+    const active = perks.filter(
+      (p) => (p.added_on ?? NEG_INF) <= today && (p.removed_on ?? POS_INF) > today,
+    );
+    if (active.length === 0) {
+      err(`hero "${h.slug}": slot ${slot} has no perk active on ${today}`);
+    } else if (active.length > 1) {
+      err(`hero "${h.slug}": slot ${slot} has ${active.length} perks active on ${today}: ${active.map((p) => p.slug).join(", ")}`);
+    }
   }
 }
 

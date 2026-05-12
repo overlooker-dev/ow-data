@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+from datetime import date as _date
 from importlib.resources import files
 from pathlib import Path
 from typing import Literal
@@ -24,6 +25,9 @@ __all__ = [
     "get_map",
     "normalize_hero_name",
     "normalize_map_name",
+    "get_active_perks",
+    "get_perk",
+    "is_perk_active",
     "asset_path",
     "hero_portraits_dir",
     "perks_dir",
@@ -55,6 +59,8 @@ class Perk:
     tier: PerkTier
     slot: int  # 1-4
     icon: str  # package-relative path
+    added_on: str | None = None  # ISO date the perk went live; None = always-existed
+    removed_on: str | None = None  # ISO date the perk was removed; None = currently active
 
 
 @dataclass(frozen=True, slots=True)
@@ -108,6 +114,8 @@ def _parse_heroes(raw: list[dict]) -> tuple[Hero, ...]:
                     tier=p["tier"],
                     slot=p["slot"],
                     icon=p["icon"],
+                    added_on=p.get("added_on"),
+                    removed_on=p.get("removed_on"),
                 )
                 for p in h["perks"]
             ),
@@ -159,6 +167,29 @@ def normalize_hero_name(input_: str) -> str | None:
 def normalize_map_name(input_: str) -> str | None:
     game_map = _MAP_LOOKUP.get(input_.lower())
     return game_map.name if game_map else None
+
+
+def is_perk_active(perk: Perk, date: str) -> bool:
+    """True iff the perk was active on the given ISO date (YYYY-MM-DD)."""
+    if perk.added_on is not None and perk.added_on > date:
+        return False
+    if perk.removed_on is not None and perk.removed_on <= date:
+        return False
+    return True
+
+
+def get_active_perks(hero: Hero, date: str | None = None) -> tuple[Perk, ...]:
+    """Perks active on the given ISO date (defaults to today)."""
+    d = date if date is not None else _date.today().isoformat()
+    return tuple(p for p in hero.perks if is_perk_active(p, d))
+
+
+def get_perk(hero: Hero, perk_slug: str) -> Perk | None:
+    """Look up a perk by slug regardless of lifecycle (for historic matches)."""
+    for p in hero.perks:
+        if p.slug == perk_slug:
+            return p
+    return None
 
 
 def asset_path(relative_path: str) -> Path:

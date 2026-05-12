@@ -89,6 +89,15 @@ Array of hero objects. One entry per playable hero. Order is not semantically me
 ]
 ```
 
+When a perk is replaced mid-lifecycle, both the old and new entries live in the same `perks` array, sharing a slot with non-overlapping active windows:
+
+```json
+{ "name": "Divine Momentum", "slug": "divine_momentum", "tier": "minor", "slot": 2,
+  "icon": "perks/mercy/divine_momentum.png", "removed_on": "2026-05-12" },
+{ "name": "Winged Reach",    "slug": "winged_reach",    "tier": "minor", "slot": 2,
+  "icon": "perks/mercy/winged_reach.png",    "added_on":   "2026-05-12" }
+```
+
 Field rules:
 
 - `name` — canonical display name as shown in the game (e.g., `D.Va`, `Soldier: 76`, `Lúcio`). This is what users see.
@@ -97,8 +106,10 @@ Field rules:
 - `subrole` — free-form but consistent. Current values in the source data: `specialist`, `flanker`, `tactician`, `medic`, `initiator`, `stalwart`, `recon`, `sharpshooter`, `survivor`, `bruiser`.
 - `portrait` — repo-relative path to the PNG. File must exist.
 - `aliases` — strings commonly produced by OCR, alternate spellings, and accent-stripped forms. Used by `normalize_hero_name()` before falling back to fuzzy matching. Do **not** include `name` itself — the lookup table handles that.
-- `perks` — exactly 4 entries, slots 1-4. Slots 1-2 are minor tier, slots 3-4 are major tier. `slug` is unique within the hero.
-- `icon` — repo-relative path to the perk PNG. File must exist.
+- `perks` — all perks the hero has *ever* had, including ones that have since been removed. At any given date, exactly 4 perks must be active (one per slot 1-4, slots 1-2 minor, slots 3-4 major). When a perk is removed and replaced, keep the old entry (set `removed_on`) and add the new entry (set `added_on`); both can share a slot as long as their active windows do not overlap. `slug` is unique within the hero (including historic perks — never reuse a slug).
+- `icon` — repo-relative path to the perk PNG. File must exist. Historic perk icons stay in the package — consumers render them for old matches.
+- `added_on` *(optional)* — ISO date (`YYYY-MM-DD`) the perk went live in-game. Absent = "has existed since we started tracking" (treat as the beginning of time).
+- `removed_on` *(optional)* — ISO date the perk was removed in-game. Absent = currently active. A perk is active on date `d` iff `(added_on ?? -∞) ≤ d < (removed_on ?? +∞)`.
 
 ### `maps.json`
 
@@ -135,7 +146,9 @@ export interface Perk {
   slug: string;
   tier: "minor" | "major";
   slot: 1 | 2 | 3 | 4;
-  icon: string;       // repo-relative path; use assetPath() for absolute
+  icon: string;        // repo-relative path; use assetPath() for absolute
+  added_on?: string;   // ISO date; undefined = always-existed
+  removed_on?: string; // ISO date; undefined = currently active
 }
 
 export interface Hero {
@@ -168,6 +181,13 @@ export function getHero(nameOrAlias: string): Hero | undefined;
 export function getMap(nameOrAlias: string): GameMap | undefined;
 export function normalizeHeroName(input: string): string | undefined;  // exact + alias match
 export function normalizeMapName(input: string): string | undefined;
+
+/** Perks active on the given ISO date (defaults to today). Always 4 entries. */
+export function getActivePerks(hero: Hero, date?: string): Perk[];
+/** Look up a perk by slug regardless of lifecycle (for historic matches). */
+export function getPerk(hero: Hero, perkSlug: string): Perk | undefined;
+/** True iff the perk was active on the given ISO date. */
+export function isPerkActive(perk: Perk, date: string): boolean;
 
 /** Returns absolute filesystem path to a packaged asset. */
 export function assetPath(relativePath: string): string;
@@ -206,6 +226,7 @@ from ow_data import (
     ALL_HERO_NAMES, ALL_MAP_NAMES,
     get_hero, get_map,
     normalize_hero_name, normalize_map_name,
+    get_active_perks, get_perk, is_perk_active,  # perk lifecycle helpers
     asset_path,                             # pathlib.Path to packaged asset
     hero_portraits_dir, perks_dir,          # pathlib.Path for Starlette mounts
 )

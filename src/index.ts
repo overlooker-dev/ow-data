@@ -25,6 +25,10 @@ export interface Perk {
   tier: PerkTier;
   slot: PerkSlot;
   icon: string;
+  /** ISO date (YYYY-MM-DD) the perk went live in-game. Absent = always-existed. */
+  added_on?: string;
+  /** ISO date (YYYY-MM-DD) the perk was removed in-game. Absent = currently active. */
+  removed_on?: string;
 }
 
 export interface Hero {
@@ -75,4 +79,26 @@ export function normalizeHeroName(input: string): string | undefined {
 
 export function normalizeMapName(input: string): string | undefined {
   return _mapLookup.get(input.toLowerCase())?.name;
+}
+
+function todayIso(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/** True iff the perk was active on the given ISO date (`YYYY-MM-DD`). */
+export function isPerkActive(perk: Perk, date: string): boolean {
+  if (perk.added_on && perk.added_on > date) return false;
+  if (perk.removed_on && perk.removed_on <= date) return false;
+  return true;
+}
+
+/** Perks active on the given ISO date (defaults to today). */
+export function getActivePerks(hero: Hero, date?: string): Perk[] {
+  const d = date ?? todayIso();
+  return hero.perks.filter((p) => isPerkActive(p, d));
+}
+
+/** Look up a perk by slug regardless of lifecycle (for rendering historic matches). */
+export function getPerk(hero: Hero, perkSlug: string): Perk | undefined {
+  return hero.perks.find((p) => p.slug === perkSlug);
 }
