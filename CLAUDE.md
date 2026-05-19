@@ -39,7 +39,7 @@ Rule of thumb: **if it's static data describing the game that both projects need
 
 | Consumer                 | Location on disk                               | Package          | Install path                       |
 | ------------------------ | ---------------------------------------------- | ---------------- | ---------------------------------- |
-| OverwatchSpotter         | `C:\Users\yegor\Projects\OverwatchSpotter`     | `@lunavod/ow-data` (npm) | GitHub Packages            |
+| OverwatchSpotter         | `C:\Users\yegor\Projects\OverwatchSpotter`     | `@overlooker-dev/ow-data` (npm) | GitHub Packages            |
 | OverwatchStatsMCP        | `C:\Users\yegor\Projects\OverwatchStatsMCP`    | `ow-data` (pip)  | Wheel attached to GitHub Release   |
 
 Read their source freely to understand how they consume the data — they're right next door.
@@ -136,7 +136,7 @@ Field rules:
 - **Hero portraits:** `hero_portraits/<slug-or-filename>.png`. The current filename scheme in both consumers uses the hero's display-name with punctuation stripped (`DVa.png`, `Soldier_76.png`, `Wrecking_Ball.png`, `Jetpack_Cat.png`, `Junker_Queen.png`). Preserve that scheme so nothing in MCP's templates has to change. The `portrait` field in `heroes.json` is the source of truth for the exact filename — do not hardcode the transformation in consumer code.
 - **Perk icons:** `perks/<hero_slug>/<perk_slug>.png`. Hero slug is the `slug` from `heroes.json`. Perk slug is the `slug` from the perk entry.
 
-## npm package (`@lunavod/ow-data`)
+## npm package (`@overlooker-dev/ow-data`)
 
 Published to GitHub Packages (`https://npm.pkg.github.com`).
 
@@ -209,7 +209,7 @@ Fuzzy matching (edit-distance fallback) stays in the **consumer** — Spotter's 
 Add to `OverwatchSpotter/.npmrc`:
 
 ```
-@lunavod:registry=https://npm.pkg.github.com
+@overlooker-dev:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
@@ -247,7 +247,7 @@ Use `importlib.resources.files("ow_data")` internally so the module works both i
 `pyproject.toml` dependency:
 
 ```toml
-"ow-data @ https://github.com/lunavod/ow-data/releases/download/v0.1.0/ow_data-0.1.0-py3-none-any.whl"
+"ow-data @ https://github.com/overlooker-dev/ow-data/releases/download/v0.1.0/ow_data-0.1.0-py3-none-any.whl"
 ```
 
 Changes in MCP:
@@ -306,7 +306,7 @@ These are the things that need doing on top of the scaffold. Do them roughly in 
 
 8. **Migrate OverwatchSpotter.**
    - Add `.npmrc` (gitignored) and CI secret.
-   - `npm install @lunavod/ow-data`.
+   - `npm install @overlooker-dev/ow-data`.
    - Rewrite `src/engine/util/heroes.ts`, `src/renderer/src/assets/hero-portraits.ts`, `src/renderer/src/assets/perks.ts`, `src/engine/analysis/perk-detection.ts` to import from the package.
    - Delete `resources/hero_portraits/`, `resources/perks/`, `resources/models/perk_classifier/perks.json`, `resources/models/ban_classifier/hero_names.txt` (keep the ONNX).
    - Update `electron-builder.yml` `asarUnpack` if Vite no longer inlines the assets (likely does; verify).

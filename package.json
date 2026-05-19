@@ -1,6 +1,6 @@
 {
-  "name": "@lunavod/ow-data",
-  "version": "0.2.0",
+  "name": "@overlooker-dev/ow-data",
+  "version": "0.3.0",
   "description": "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons.",
   "type": "module",
   "main": "./dist/index.js",
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lunavod/ow-data.git"
+    "url": "git+https://github.com/overlooker-dev/ow-data.git"
   },
   "license": "UNLICENSED",
   "private": false,

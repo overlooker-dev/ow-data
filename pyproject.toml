@@ -4,15 +4,15 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ow-data"
-version = "0.2.0"
+version = "0.3.0"
 description = "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons."
 readme = "CLAUDE.md"
 requires-python = ">=3.10"
 license = { text = "UNLICENSED" }
-authors = [{ name = "lunavod" }]
+authors = [{ name = "overlooker-dev" }]
 
 [project.urls]
-Repository = "https://github.com/lunavod/ow-data"
+Repository = "https://github.com/overlooker-dev/ow-data"
 
 [tool.hatch.build.targets.wheel]
 packages = ["ow_data"]

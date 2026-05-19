@@ -1,5 +1,5 @@
 # Triggered on tag push (v*). Publishes:
-#   - npm package to GitHub Packages (@lunavod/ow-data)
+#   - npm package to GitHub Packages (@overlooker-dev/ow-data)
 #   - Python wheel attached to the GitHub Release
 # Version is taken from the tag and synced into package.json + pyproject.toml
 # at CI time, so humans only need to tag correctly.
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: "22" # required for --experimental-strip-types in validate script
           registry-url: "https://npm.pkg.github.com"
-          scope: "@lunavod"
+          scope: "@overlooker-dev"
 
       - name: Setup Python
         uses: actions/setup-python@v5
