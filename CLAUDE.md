@@ -78,6 +78,7 @@ Array of hero objects. One entry per playable hero. Order is not semantically me
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/DVa.png",
+    "color": "#F498BD",
     "aliases": ["DVa", "D Va", "DVA"],
     "perks": [
       { "name": "Groggy",  "slug": "groggy",  "tier": "minor", "slot": 1, "icon": "perks/dva/groggy.png" },
@@ -105,6 +106,7 @@ Field rules:
 - `role` — one of `tank` | `damage` | `support`.
 - `subrole` — free-form but consistent. Current values in the source data: `specialist`, `flanker`, `tactician`, `medic`, `initiator`, `stalwart`, `recon`, `sharpshooter`, `survivor`, `bruiser`.
 - `portrait` — repo-relative path to the PNG. File must exist.
+- `color` — accent color as a `#RRGGBB` hex string. Curated per hero from the in-game/portrait palette. Used by client UIs that need a single hero-keyed color (e.g., hero-swap timelines, role bars).
 - `aliases` — strings commonly produced by OCR, alternate spellings, and accent-stripped forms. Used by `normalize_hero_name()` before falling back to fuzzy matching. Do **not** include `name` itself — the lookup table handles that.
 - `perks` — all perks the hero has *ever* had, including ones that have since been removed. At any given date, exactly 4 perks must be active (one per slot 1-4, slots 1-2 minor, slots 3-4 major). When a perk is removed and replaced, keep the old entry (set `removed_on`) and add the new entry (set `added_on`); both can share a slot as long as their active windows do not overlap. `slug` is unique within the hero (including historic perks — never reuse a slug).
 - `icon` — repo-relative path to the perk PNG. File must exist. Historic perk icons stay in the package — consumers render them for old matches.
@@ -157,6 +159,7 @@ export interface Hero {
   role: "tank" | "damage" | "support";
   subrole: string;
   portrait: string;
+  color: string;        // #RRGGBB accent
   aliases: string[];
   perks: Perk[];
 }

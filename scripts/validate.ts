@@ -23,6 +23,7 @@ interface Hero {
   role: string;
   subrole: string;
   portrait: string;
+  color: string;
   aliases: string[];
   perks: Perk[];
 }
@@ -47,6 +48,7 @@ const errors: string[] = [];
 const err = (msg: string): void => { errors.push(msg); };
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const HEX_COLOR = /^#[0-9a-fA-F]{6}$/;
 const today = new Date().toISOString().slice(0, 10);
 const NEG_INF = "0000-00-00";
 const POS_INF = "9999-99-99";
@@ -67,6 +69,10 @@ for (const h of heroes) {
     err(`hero "${h.slug}": missing portrait file ${h.portrait}`);
   }
   referencedPortraits.add(h.portrait);
+
+  if (!HEX_COLOR.test(h.color)) {
+    err(`hero "${h.slug}": color "${h.color}" is not a #RRGGBB hex string`);
+  }
 
   const nameKey = h.name.toLowerCase();
   if (heroLookup.has(nameKey)) {

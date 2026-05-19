@@ -70,6 +70,7 @@ class Hero:
     role: Role
     subrole: str
     portrait: str
+    color: str  # accent color as #RRGGBB
     aliases: tuple[str, ...]
     perks: tuple[Perk, ...]
 
@@ -106,6 +107,7 @@ def _parse_heroes(raw: list[dict]) -> tuple[Hero, ...]:
             role=h["role"],
             subrole=h["subrole"],
             portrait=h["portrait"],
+            color=h["color"],
             aliases=tuple(h.get("aliases", [])),
             perks=tuple(
                 Perk(

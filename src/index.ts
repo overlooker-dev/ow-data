@@ -37,6 +37,8 @@ export interface Hero {
   role: Role;
   subrole: string;
   portrait: string;
+  /** Accent color as a `#RRGGBB` hex string. Used by clients for hero-keyed UI (e.g., swap timelines). */
+  color: string;
   aliases: string[];
   perks: Perk[];
 }
