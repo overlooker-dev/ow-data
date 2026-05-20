@@ -28,9 +28,12 @@ __all__ = [
     "get_active_perks",
     "get_perk",
     "is_perk_active",
+    "map_background",
+    "MAP_BACKGROUND_WIDTHS",
     "asset_path",
     "hero_portraits_dir",
     "perks_dir",
+    "map_backgrounds_dir",
 ]
 
 Role = Literal["tank", "damage", "support"]
@@ -80,6 +83,10 @@ class GameMap:
     name: str
     mode: MapMode
     aliases: tuple[str, ...]
+    background: str  # webp filename; use map_background() to build a width-specific path
+
+
+MAP_BACKGROUND_WIDTHS: tuple[int, ...] = (1920, 1280, 640, 320)
 
 
 def _resolve_pkg_root() -> Path:
@@ -128,7 +135,12 @@ def _parse_heroes(raw: list[dict]) -> tuple[Hero, ...]:
 
 def _parse_maps(raw: list[dict]) -> tuple[GameMap, ...]:
     return tuple(
-        GameMap(name=m["name"], mode=m["mode"], aliases=tuple(m.get("aliases", [])))
+        GameMap(
+            name=m["name"],
+            mode=m["mode"],
+            aliases=tuple(m.get("aliases", [])),
+            background=m["background"],
+        )
         for m in raw
     )
 
@@ -194,6 +206,15 @@ def get_perk(hero: Hero, perk_slug: str) -> Perk | None:
     return None
 
 
+def map_background(game_map: GameMap, width: int) -> str:
+    """Package-relative path to a map's background at the given width.
+
+    Pass the result to asset_path() for an absolute path. Width should be one
+    of MAP_BACKGROUND_WIDTHS.
+    """
+    return f"map_backgrounds/{width}/{game_map.background}"
+
+
 def asset_path(relative_path: str) -> Path:
     """Absolute path to a packaged asset (e.g., 'hero_portraits/DVa.png')."""
     return _pkg_root / relative_path
@@ -201,3 +222,4 @@ def asset_path(relative_path: str) -> Path:
 
 hero_portraits_dir: Path = _pkg_root / "hero_portraits"
 perks_dir: Path = _pkg_root / "perks"
+map_backgrounds_dir: Path = _pkg_root / "map_backgrounds"

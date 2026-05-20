@@ -1,6 +1,6 @@
 {
   "name": "@overlooker-dev/ow-data",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons.",
   "type": "module",
   "main": "./dist/index.js",
@@ -24,7 +24,11 @@
     "heroes.json",
     "maps.json",
     "hero_portraits",
-    "perks"
+    "perks",
+    "map_backgrounds/1920",
+    "map_backgrounds/1280",
+    "map_backgrounds/640",
+    "map_backgrounds/320"
   ],
   "scripts": {
     "build": "tsc",

@@ -47,7 +47,13 @@ export interface GameMap {
   name: string;
   mode: MapMode;
   aliases: string[];
+  /** Background image filename (webp). Use `mapBackground()` to build a width-specific path. */
+  background: string;
 }
+
+/** Available widths for map background variants. */
+export const MAP_BACKGROUND_WIDTHS = [1920, 1280, 640, 320] as const;
+export type MapBackgroundWidth = (typeof MAP_BACKGROUND_WIDTHS)[number];
 
 export const heroes: Hero[] = heroesJson as Hero[];
 export const maps: GameMap[] = mapsJson as GameMap[];
@@ -81,6 +87,11 @@ export function normalizeHeroName(input: string): string | undefined {
 
 export function normalizeMapName(input: string): string | undefined {
   return _mapLookup.get(input.toLowerCase())?.name;
+}
+
+/** Repo-relative path to a map's background at the given width. Pass to `assetPath()` for an absolute path. */
+export function mapBackground(map: GameMap, width: MapBackgroundWidth): string {
+  return `map_backgrounds/${width}/${map.background}`;
 }
 
 function todayIso(): string {

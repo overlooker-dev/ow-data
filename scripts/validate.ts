@@ -31,6 +31,7 @@ interface GameMap {
   name: string;
   mode: string;
   aliases: string[];
+  background: string;
 }
 
 const heroes: Hero[] = JSON.parse(readFileSync(resolve(repoRoot, "heroes.json"), "utf-8"));
@@ -155,6 +156,9 @@ for (const h of heroes) {
   }
 }
 
+const MAP_BACKGROUND_WIDTHS = [1920, 1280, 640, 320];
+const referencedBackgrounds = new Set<string>();
+
 const mapNames = new Set<string>();
 const mapLookup = new Map<string, string>();
 
@@ -163,6 +167,14 @@ for (const m of maps) {
 
   if (mapNames.has(m.name)) err(`map name duplicated: "${m.name}"`);
   mapNames.add(m.name);
+
+  for (const width of MAP_BACKGROUND_WIDTHS) {
+    const rel = `map_backgrounds/${width}/${m.background}`;
+    if (!existsSync(resolve(repoRoot, rel))) {
+      err(`map "${m.name}": missing background file ${rel}`);
+    }
+    referencedBackgrounds.add(rel);
+  }
 
   const nameKey = m.name.toLowerCase();
   if (mapLookup.has(nameKey)) {
@@ -207,6 +219,16 @@ if (existsSync(perksDir)) {
   }
 }
 
+for (const width of MAP_BACKGROUND_WIDTHS) {
+  const dir = resolve(repoRoot, `map_backgrounds/${width}`);
+  if (!existsSync(dir)) continue;
+  for (const f of readdirSync(dir)) {
+    if (f.startsWith(".")) continue;
+    const rel = `map_backgrounds/${width}/${f}`;
+    if (!referencedBackgrounds.has(rel)) err(`orphan map background on disk: ${rel}`);
+  }
+}
+
 if (errors.length > 0) {
   console.error(`validation failed: ${errors.length} error(s)`);
   for (const e of errors) console.error(`  - ${e}`);
@@ -214,5 +236,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `ok — ${heroes.length} heroes, ${maps.length} maps, ${referencedPortraits.size} portraits, ${referencedIcons.size} perk icons`,
+  `ok — ${heroes.length} heroes, ${maps.length} maps, ${referencedPortraits.size} portraits, ${referencedIcons.size} perk icons, ${referencedBackgrounds.size} map backgrounds`,
 );

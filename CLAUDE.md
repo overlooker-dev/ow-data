@@ -23,9 +23,10 @@ Every time Blizzard adds a hero, map, or perk, both repos had to be updated sepa
 **In scope:** cross-project reference data.
 
 - `heroes.json` — hero metadata (name, slug, role, subrole, portrait path, perks, aliases)
-- `maps.json` — map metadata (name, mode, aliases)
+- `maps.json` — map metadata (name, mode, aliases, background)
 - `hero_portraits/*.png` — one per hero
 - `perks/<hero_slug>/<perk_slug>.png` — one per perk (~204 files)
+- `map_backgrounds/<width>/<map_slug>.webp` — map background, 4 width variants (1920/1280/640/320)
 
 **Out of scope:**
 
@@ -53,6 +54,9 @@ ow-data/
 ├── maps.json                      # canonical map metadata
 ├── hero_portraits/*.png           # 51 files
 ├── perks/<hero_slug>/<perk_slug>.png  # ~204 files
+├── map_backgrounds/                # map backgrounds (webp)
+│   ├── 1920/ 1280/ 640/ 320/      #   62 files each — width variants
+│   └── _source/                   #   original downloads, not published
 ├── package.json                   # npm package manifest
 ├── tsconfig.json
 ├── src/
@@ -119,9 +123,9 @@ Array of map objects.
 
 ```json
 [
-  { "name": "King's Row",    "mode": "hybrid",  "aliases": ["Kings Row"] },
-  { "name": "Circuit Royal", "mode": "escort",  "aliases": [] },
-  { "name": "Paraíso",       "mode": "hybrid",  "aliases": ["Paraiso"] }
+  { "name": "King's Row",    "mode": "hybrid",  "aliases": ["Kings Row"], "background": "king_s_row.webp" },
+  { "name": "Circuit Royal", "mode": "escort",  "aliases": [],            "background": "circuit_royal.webp" },
+  { "name": "Paraíso",       "mode": "hybrid",  "aliases": ["Paraiso"],   "background": "paraiso.webp" }
 ]
 ```
 
@@ -130,11 +134,13 @@ Field rules:
 - `name` — canonical map name as Blizzard spells it.
 - `mode` — one of `control` | `escort` | `hybrid` | `push` | `flashpoint` | `clash` | `payload_race` | `assault` | `capture_the_flag` | `deathmatch` | `elimination` | `workshop` | `training`. Add new modes as they ship. The first six are Standard Play competitive modes; `payload_race` is Stadium-exclusive; `assault`/`capture_the_flag`/`deathmatch`/`elimination` are Arcade; `workshop` and `training` are custom games / training maps.
 - `aliases` — accent-stripped or punctuation-stripped forms (e.g., `"Paraiso"`, `"Kings Row"`, `"Chateau Guillard"`), OCR variants, and common misspellings. Stadium maps that share a base theme with a Standard map are distinct maps with distinct names (e.g., Stadium's `Busan Sanctuary` vs Standard's `Busan`) — do **not** alias one to the other.
+- `background` — background image filename (just the filename, e.g. `route_66.webp`). The same filename exists under every width directory in `map_backgrounds/`. Use `mapBackground()` / `map_background()` to build a width-specific repo-relative path — do not hardcode the path in consumer code.
 
 ## Asset conventions
 
 - **Hero portraits:** `hero_portraits/<slug-or-filename>.png`. The current filename scheme in both consumers uses the hero's display-name with punctuation stripped (`DVa.png`, `Soldier_76.png`, `Wrecking_Ball.png`, `Jetpack_Cat.png`, `Junker_Queen.png`). Preserve that scheme so nothing in MCP's templates has to change. The `portrait` field in `heroes.json` is the source of truth for the exact filename — do not hardcode the transformation in consumer code.
 - **Perk icons:** `perks/<hero_slug>/<perk_slug>.png`. Hero slug is the `slug` from `heroes.json`. Perk slug is the `slug` from the perk entry.
+- **Map backgrounds:** `map_backgrounds/<width>/<map_slug>.webp`, where `<width>` is one of `1920`, `1280`, `640`, `320` and the filename is the `background` field from `maps.json`. The same filename exists under all four width directories (smaller-than-target sources are not upscaled, so a few low-res maps have an unchanged image in the larger directories). Originals live in `map_backgrounds/_source/` and are **not** published. Regenerate variants with `scripts/process_map_backgrounds.py`; re-fetch sources with `scripts/fetch_map_backgrounds.py`.
 
 ## npm package (`@overlooker-dev/ow-data`)
 
@@ -172,18 +178,25 @@ export interface GameMap {
     | "assault" | "capture_the_flag" | "deathmatch" | "elimination"
     | "workshop" | "training";
   aliases: string[];
+  background: string;   // webp filename; use mapBackground() for a width-specific path
 }
+
+export type MapBackgroundWidth = 1920 | 1280 | 640 | 320;
 
 export const heroes: Hero[];
 export const maps: GameMap[];
 
 export const ALL_HERO_NAMES: string[];
 export const ALL_MAP_NAMES: string[];
+export const MAP_BACKGROUND_WIDTHS: readonly [1920, 1280, 640, 320];
 
 export function getHero(nameOrAlias: string): Hero | undefined;
 export function getMap(nameOrAlias: string): GameMap | undefined;
 export function normalizeHeroName(input: string): string | undefined;  // exact + alias match
 export function normalizeMapName(input: string): string | undefined;
+
+/** Repo-relative path to a map's background at the given width; use assetPath() for absolute. */
+export function mapBackground(map: GameMap, width: MapBackgroundWidth): string;
 
 /** Perks active on the given ISO date (defaults to today). Always 4 entries. */
 export function getActivePerks(hero: Hero, date?: string): Perk[];
@@ -201,7 +214,7 @@ Fuzzy matching (edit-distance fallback) stays in the **consumer** — Spotter's 
 ### Publishing
 
 - `package.json` field: `"publishConfig": { "registry": "https://npm.pkg.github.com" }`
-- `files` includes: `dist/`, `heroes.json`, `maps.json`, `hero_portraits/`, `perks/`
+- `files` includes: `dist/`, `heroes.json`, `maps.json`, `hero_portraits/`, `perks/`, and the `map_backgrounds/` width directories (`_source/` excluded)
 - GitHub Actions workflow on tag push builds and publishes.
 
 ### Consuming in Spotter
@@ -230,8 +243,10 @@ from ow_data import (
     get_hero, get_map,
     normalize_hero_name, normalize_map_name,
     get_active_perks, get_perk, is_perk_active,  # perk lifecycle helpers
+    map_background, MAP_BACKGROUND_WIDTHS,   # map background path helper
     asset_path,                             # pathlib.Path to packaged asset
     hero_portraits_dir, perks_dir,          # pathlib.Path for Starlette mounts
+    map_backgrounds_dir,                    # pathlib.Path for Starlette mounts
 )
 ```
 
@@ -239,7 +254,7 @@ Use `importlib.resources.files("ow_data")` internally so the module works both i
 
 ### Publishing
 
-- `pyproject.toml` uses hatchling. Package data includes `heroes.json`, `maps.json`, `hero_portraits/**/*.png`, `perks/**/*.png`.
+- `pyproject.toml` uses hatchling. Package data includes `heroes.json`, `maps.json`, `hero_portraits/**/*.png`, `perks/**/*.png`, `map_backgrounds/{1920,1280,640,320}/*.webp` (`_source/` excluded).
 - Release workflow runs `python -m build`, attaches `ow_data-X.Y.Z-py3-none-any.whl` to the GitHub Release.
 
 ### Consuming in MCP
