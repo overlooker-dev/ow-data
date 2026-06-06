@@ -5,6 +5,7 @@
     "role": "support",
     "subrole": "tactician",
     "portrait": "hero_portraits/Ana.png",
+    "icon": "hero_icons/Ana.png",
     "color": "#5B7AAB",
     "aliases": [],
     "perks": [
@@ -44,6 +45,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Anran.png",
+    "icon": "hero_icons/Anran.png",
     "color": "#E8843A",
     "aliases": [],
     "perks": [
@@ -83,6 +85,7 @@
     "role": "damage",
     "subrole": "sharpshooter",
     "portrait": "hero_portraits/Ashe.png",
+    "icon": "hero_icons/Ashe.png",
     "color": "#B33A3A",
     "aliases": [],
     "perks": [
@@ -122,6 +125,7 @@
     "role": "support",
     "subrole": "tactician",
     "portrait": "hero_portraits/Baptiste.png",
+    "icon": "hero_icons/Baptiste.png",
     "color": "#2EB1A8",
     "aliases": [],
     "perks": [
@@ -161,6 +165,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Bastion.png",
+    "icon": "hero_icons/Bastion.png",
     "color": "#6B8AB4",
     "aliases": [],
     "perks": [
@@ -200,6 +205,7 @@
     "role": "support",
     "subrole": "survivor",
     "portrait": "hero_portraits/Brigitte.png",
+    "icon": "hero_icons/Brigitte.png",
     "color": "#C8924A",
     "aliases": [],
     "perks": [
@@ -239,6 +245,7 @@
     "role": "damage",
     "subrole": "sharpshooter",
     "portrait": "hero_portraits/Cassidy.png",
+    "icon": "hero_icons/Cassidy.png",
     "color": "#8B3A2F",
     "aliases": [],
     "perks": [
@@ -278,6 +285,7 @@
     "role": "tank",
     "subrole": "initiator",
     "portrait": "hero_portraits/DVa.png",
+    "icon": "hero_icons/DVa.png",
     "color": "#F498BD",
     "aliases": [
       "DVa",
@@ -320,6 +328,7 @@
     "role": "tank",
     "subrole": "stalwart",
     "portrait": "hero_portraits/Domina.png",
+    "icon": "hero_icons/Domina.png",
     "color": "#E8B833",
     "aliases": [],
     "perks": [
@@ -359,6 +368,7 @@
     "role": "tank",
     "subrole": "initiator",
     "portrait": "hero_portraits/Doomfist.png",
+    "icon": "hero_icons/Doomfist.png",
     "color": "#B33E3E",
     "aliases": [],
     "perks": [
@@ -398,6 +408,7 @@
     "role": "damage",
     "subrole": "recon",
     "portrait": "hero_portraits/Echo.png",
+    "icon": "hero_icons/Echo.png",
     "color": "#66D3FA",
     "aliases": [],
     "perks": [
@@ -437,6 +448,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Emre.png",
+    "icon": "hero_icons/Emre.png",
     "color": "#C46A3A",
     "aliases": [],
     "perks": [
@@ -476,6 +488,7 @@
     "role": "damage",
     "subrole": "recon",
     "portrait": "hero_portraits/Freja.png",
+    "icon": "hero_icons/Freja.png",
     "color": "#E89464",
     "aliases": [],
     "perks": [
@@ -515,6 +528,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Genji.png",
+    "icon": "hero_icons/Genji.png",
     "color": "#7AE15C",
     "aliases": [],
     "perks": [
@@ -554,6 +568,7 @@
     "role": "damage",
     "subrole": "sharpshooter",
     "portrait": "hero_portraits/Hanzo.png",
+    "icon": "hero_icons/Hanzo.png",
     "color": "#4A6E8E",
     "aliases": [],
     "perks": [
@@ -593,6 +608,7 @@
     "role": "tank",
     "subrole": "initiator",
     "portrait": "hero_portraits/Hazard.png",
+    "icon": "hero_icons/Hazard.png",
     "color": "#9C5BC4",
     "aliases": [],
     "perks": [
@@ -632,6 +648,7 @@
     "role": "support",
     "subrole": "survivor",
     "portrait": "hero_portraits/Illari.png",
+    "icon": "hero_icons/Illari.png",
     "color": "#F08A24",
     "aliases": [],
     "perks": [
@@ -671,6 +688,7 @@
     "role": "support",
     "subrole": "tactician",
     "portrait": "hero_portraits/Jetpack_Cat.png",
+    "icon": "hero_icons/Jetpack_Cat.png",
     "color": "#E8A14A",
     "aliases": [
       "Jetpack_Cat",
@@ -713,6 +731,7 @@
     "role": "tank",
     "subrole": "stalwart",
     "portrait": "hero_portraits/Junker_Queen.png",
+    "icon": "hero_icons/Junker_Queen.png",
     "color": "#6B7AB4",
     "aliases": [
       "Junker_Queen",
@@ -755,6 +774,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Junkrat.png",
+    "icon": "hero_icons/Junkrat.png",
     "color": "#E8B028",
     "aliases": [],
     "perks": [
@@ -794,6 +814,7 @@
     "role": "support",
     "subrole": "survivor",
     "portrait": "hero_portraits/Juno.png",
+    "icon": "hero_icons/Juno.png",
     "color": "#8A6FD4",
     "aliases": [],
     "perks": [
@@ -833,6 +854,7 @@
     "role": "support",
     "subrole": "medic",
     "portrait": "hero_portraits/Kiriko.png",
+    "icon": "hero_icons/Kiriko.png",
     "color": "#D44676",
     "aliases": [],
     "perks": [
@@ -872,6 +894,7 @@
     "role": "support",
     "subrole": "medic",
     "portrait": "hero_portraits/Lifeweaver.png",
+    "icon": "hero_icons/Lifeweaver.png",
     "color": "#E0509B",
     "aliases": [],
     "perks": [
@@ -911,6 +934,7 @@
     "role": "support",
     "subrole": "tactician",
     "portrait": "hero_portraits/Lucio.png",
+    "icon": "hero_icons/Lucio.png",
     "color": "#92DC4A",
     "aliases": [
       "Lucio"
@@ -952,6 +976,7 @@
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/Mauga.png",
+    "icon": "hero_icons/Mauga.png",
     "color": "#C84030",
     "aliases": [],
     "perks": [
@@ -991,6 +1016,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Mei.png",
+    "icon": "hero_icons/Mei.png",
     "color": "#6AC8E0",
     "aliases": [],
     "perks": [
@@ -1030,6 +1056,7 @@
     "role": "support",
     "subrole": "medic",
     "portrait": "hero_portraits/Mercy.png",
+    "icon": "hero_icons/Mercy.png",
     "color": "#FFD24A",
     "aliases": [],
     "perks": [
@@ -1078,6 +1105,7 @@
     "role": "support",
     "subrole": "survivor",
     "portrait": "hero_portraits/Mizuki.png",
+    "icon": "hero_icons/Mizuki.png",
     "color": "#4ECCA3",
     "aliases": [],
     "perks": [
@@ -1117,6 +1145,7 @@
     "role": "support",
     "subrole": "medic",
     "portrait": "hero_portraits/Moira.png",
+    "icon": "hero_icons/Moira.png",
     "color": "#8E4DAF",
     "aliases": [],
     "perks": [
@@ -1156,6 +1185,7 @@
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/Orisa.png",
+    "icon": "hero_icons/Orisa.png",
     "color": "#5BA84A",
     "aliases": [],
     "perks": [
@@ -1195,6 +1225,7 @@
     "role": "damage",
     "subrole": "recon",
     "portrait": "hero_portraits/Pharah.png",
+    "icon": "hero_icons/Pharah.png",
     "color": "#2E5DB8",
     "aliases": [],
     "perks": [
@@ -1234,6 +1265,7 @@
     "role": "tank",
     "subrole": "stalwart",
     "portrait": "hero_portraits/Ramattra.png",
+    "icon": "hero_icons/Ramattra.png",
     "color": "#6A4D8E",
     "aliases": [],
     "perks": [
@@ -1273,6 +1305,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Reaper.png",
+    "icon": "hero_icons/Reaper.png",
     "color": "#5A1E1E",
     "aliases": [],
     "perks": [
@@ -1312,6 +1345,7 @@
     "role": "tank",
     "subrole": "stalwart",
     "portrait": "hero_portraits/Reinhardt.png",
+    "icon": "hero_icons/Reinhardt.png",
     "color": "#4A6E96",
     "aliases": [],
     "perks": [
@@ -1351,6 +1385,7 @@
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/Roadhog.png",
+    "icon": "hero_icons/Roadhog.png",
     "color": "#B4604E",
     "aliases": [],
     "perks": [
@@ -1390,6 +1425,7 @@
     "role": "damage",
     "subrole": "recon",
     "portrait": "hero_portraits/Sierra.png",
+    "icon": "hero_icons/Sierra.png",
     "color": "#E8556B",
     "aliases": [],
     "perks": [
@@ -1429,6 +1465,7 @@
     "role": "tank",
     "subrole": "stalwart",
     "portrait": "hero_portraits/Sigma.png",
+    "icon": "hero_icons/Sigma.png",
     "color": "#6A5A8E",
     "aliases": [],
     "perks": [
@@ -1468,6 +1505,7 @@
     "role": "damage",
     "subrole": "sharpshooter",
     "portrait": "hero_portraits/Sojourn.png",
+    "icon": "hero_icons/Sojourn.png",
     "color": "#C84030",
     "aliases": [],
     "perks": [
@@ -1507,6 +1545,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Soldier_76.png",
+    "icon": "hero_icons/Soldier_76.png",
     "color": "#4A78B4",
     "aliases": [
       "Soldier 76",
@@ -1551,6 +1590,7 @@
     "role": "damage",
     "subrole": "recon",
     "portrait": "hero_portraits/Sombra.png",
+    "icon": "hero_icons/Sombra.png",
     "color": "#7A3FA8",
     "aliases": [],
     "perks": [
@@ -1590,6 +1630,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Symmetra.png",
+    "icon": "hero_icons/Symmetra.png",
     "color": "#4ABBC4",
     "aliases": [],
     "perks": [
@@ -1629,6 +1670,7 @@
     "role": "damage",
     "subrole": "specialist",
     "portrait": "hero_portraits/Torbjorn.png",
+    "icon": "hero_icons/Torbjorn.png",
     "color": "#C04030",
     "aliases": [
       "Torbjorn"
@@ -1670,6 +1712,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Tracer.png",
+    "icon": "hero_icons/Tracer.png",
     "color": "#E88A2E",
     "aliases": [],
     "perks": [
@@ -1709,6 +1752,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Vendetta.png",
+    "icon": "hero_icons/Vendetta.png",
     "color": "#B33A4A",
     "aliases": [],
     "perks": [
@@ -1748,6 +1792,7 @@
     "role": "damage",
     "subrole": "flanker",
     "portrait": "hero_portraits/Venture.png",
+    "icon": "hero_icons/Venture.png",
     "color": "#C4762E",
     "aliases": [],
     "perks": [
@@ -1787,6 +1832,7 @@
     "role": "damage",
     "subrole": "sharpshooter",
     "portrait": "hero_portraits/Widowmaker.png",
+    "icon": "hero_icons/Widowmaker.png",
     "color": "#5A4DA8",
     "aliases": [],
     "perks": [
@@ -1826,6 +1872,7 @@
     "role": "tank",
     "subrole": "initiator",
     "portrait": "hero_portraits/Winston.png",
+    "icon": "hero_icons/Winston.png",
     "color": "#4D6EA8",
     "aliases": [],
     "perks": [
@@ -1865,6 +1912,7 @@
     "role": "tank",
     "subrole": "initiator",
     "portrait": "hero_portraits/Wrecking_Ball.png",
+    "icon": "hero_icons/Wrecking_Ball.png",
     "color": "#D08A2E",
     "aliases": [
       "Wrecking_Ball",
@@ -1907,6 +1955,7 @@
     "role": "support",
     "subrole": "survivor",
     "portrait": "hero_portraits/Wuyang.png",
+    "icon": "hero_icons/Wuyang.png",
     "color": "#4A6FB4",
     "aliases": [],
     "perks": [
@@ -1946,6 +1995,7 @@
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/Zarya.png",
+    "icon": "hero_icons/Zarya.png",
     "color": "#E85088",
     "aliases": [],
     "perks": [
@@ -1985,6 +2035,7 @@
     "role": "support",
     "subrole": "tactician",
     "portrait": "hero_portraits/Zenyatta.png",
+    "icon": "hero_icons/Zenyatta.png",
     "color": "#DCB04A",
     "aliases": [],
     "perks": [

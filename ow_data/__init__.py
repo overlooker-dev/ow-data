@@ -32,6 +32,7 @@ __all__ = [
     "MAP_BACKGROUND_WIDTHS",
     "asset_path",
     "hero_portraits_dir",
+    "hero_icons_dir",
     "perks_dir",
     "map_backgrounds_dir",
 ]
@@ -73,6 +74,7 @@ class Hero:
     role: Role
     subrole: str
     portrait: str
+    icon: str  # repo-relative path to the hero's square icon PNG
     color: str  # accent color as #RRGGBB
     aliases: tuple[str, ...]
     perks: tuple[Perk, ...]
@@ -114,6 +116,7 @@ def _parse_heroes(raw: list[dict]) -> tuple[Hero, ...]:
             role=h["role"],
             subrole=h["subrole"],
             portrait=h["portrait"],
+            icon=h["icon"],
             color=h["color"],
             aliases=tuple(h.get("aliases", [])),
             perks=tuple(
@@ -221,5 +224,6 @@ def asset_path(relative_path: str) -> Path:
 
 
 hero_portraits_dir: Path = _pkg_root / "hero_portraits"
+hero_icons_dir: Path = _pkg_root / "hero_icons"
 perks_dir: Path = _pkg_root / "perks"
 map_backgrounds_dir: Path = _pkg_root / "map_backgrounds"

@@ -11,6 +11,10 @@ Transforms:
 - Seeds aliases for accented / punctuated names.
 - Sorts heroes alphabetically by name.
 - Validates every portrait and perk icon exists on disk.
+
+`color` is curated per hero (not derivable from the source) and is preserved from the
+existing heroes.json by slug. A hero with no existing color entry is a validation error —
+re-running this script will never silently drop a curated color.
 """
 
 from __future__ import annotations
@@ -64,6 +68,13 @@ def main() -> int:
     raw = json.loads(SPOTTER_PERKS.read_text(encoding="utf-8"))
     src_heroes = raw["heroes"]
 
+    # Curated fields that can't be derived from the source — preserve by slug.
+    existing_color: dict[str, str] = {}
+    if OUT.exists():
+        for h in json.loads(OUT.read_text(encoding="utf-8")):
+            if "color" in h:
+                existing_color[h["slug"]] = h["color"]
+
     out_heroes = []
     errors: list[str] = []
 
@@ -71,6 +82,7 @@ def main() -> int:
         name = h["name"]
         slug = h["slug"].replace("-", "_")
         portrait_rel = f"hero_portraits/{portrait_filename(name)}"
+        hero_icon_rel = f"hero_icons/{portrait_filename(name)}"  # same filename scheme as portrait
 
         perks_out = []
         for p in h["perks"]:
@@ -89,6 +101,12 @@ def main() -> int:
 
         if not (REPO / portrait_rel).exists():
             errors.append(f"missing portrait: {portrait_rel} (hero {name!r})")
+        if not (REPO / hero_icon_rel).exists():
+            errors.append(f"missing hero icon: {hero_icon_rel} (hero {name!r})")
+
+        color = existing_color.get(slug)
+        if color is None:
+            errors.append(f"no curated color for hero {name!r} (slug {slug}) in existing heroes.json")
 
         out_heroes.append({
             "name": name,
@@ -96,6 +114,8 @@ def main() -> int:
             "role": h["role"],
             "subrole": h["subrole"],
             "portrait": portrait_rel,
+            "icon": hero_icon_rel,
+            "color": color,
             "aliases": aliases_for(name),
             "perks": perks_out,
         })

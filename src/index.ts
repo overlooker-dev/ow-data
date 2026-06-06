@@ -37,6 +37,8 @@ export interface Hero {
   role: Role;
   subrole: string;
   portrait: string;
+  /** Repo-relative path to the hero's square icon PNG; use assetPath() for absolute. */
+  icon: string;
   /** Accent color as a `#RRGGBB` hex string. Used by clients for hero-keyed UI (e.g., swap timelines). */
   color: string;
   aliases: string[];

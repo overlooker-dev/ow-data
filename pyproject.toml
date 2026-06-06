@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ow-data"
-version = "0.4.0"
+version = "0.5.0"
 description = "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons."
 readme = "CLAUDE.md"
 requires-python = ">=3.10"
@@ -23,6 +23,7 @@ packages = ["ow_data"]
 "heroes.json" = "ow_data/heroes.json"
 "maps.json" = "ow_data/maps.json"
 "hero_portraits" = "ow_data/hero_portraits"
+"hero_icons" = "ow_data/hero_icons"
 "perks" = "ow_data/perks"
 "map_backgrounds/1920" = "ow_data/map_backgrounds/1920"
 "map_backgrounds/1280" = "ow_data/map_backgrounds/1280"
@@ -35,6 +36,7 @@ include = [
     "heroes.json",
     "maps.json",
     "hero_portraits",
+    "hero_icons",
     "perks",
     "map_backgrounds/1920",
     "map_backgrounds/1280",

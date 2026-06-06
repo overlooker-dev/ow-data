@@ -25,6 +25,7 @@ Every time Blizzard adds a hero, map, or perk, both repos had to be updated sepa
 - `heroes.json` — hero metadata (name, slug, role, subrole, portrait path, perks, aliases)
 - `maps.json` — map metadata (name, mode, aliases, background)
 - `hero_portraits/*.png` — one per hero
+- `hero_icons/*.png` — one per hero (in-game hero-select icons)
 - `perks/<hero_slug>/<perk_slug>.png` — one per perk (~204 files)
 - `map_backgrounds/<width>/<map_slug>.webp` — map background, 4 width variants (1920/1280/640/320)
 
@@ -53,6 +54,7 @@ ow-data/
 ├── heroes.json                    # canonical hero metadata
 ├── maps.json                      # canonical map metadata
 ├── hero_portraits/*.png           # 51 files
+├── hero_icons/*.png               # 51 files — in-game hero-select icons
 ├── perks/<hero_slug>/<perk_slug>.png  # ~204 files
 ├── map_backgrounds/                # map backgrounds (webp)
 │   ├── 1920/ 1280/ 640/ 320/      #   62 files each — width variants
@@ -82,6 +84,7 @@ Array of hero objects. One entry per playable hero. Order is not semantically me
     "role": "tank",
     "subrole": "bruiser",
     "portrait": "hero_portraits/DVa.png",
+    "icon": "hero_icons/DVa.png",
     "color": "#F498BD",
     "aliases": ["DVa", "D Va", "DVA"],
     "perks": [
@@ -109,7 +112,8 @@ Field rules:
 - `slug` — lowercase, no punctuation, underscores for spaces (`dva`, `soldier_76`, `lucio`, `wrecking_ball`). Used in file paths and as a stable identifier.
 - `role` — one of `tank` | `damage` | `support`.
 - `subrole` — free-form but consistent. Current values in the source data: `specialist`, `flanker`, `tactician`, `medic`, `initiator`, `stalwart`, `recon`, `sharpshooter`, `survivor`, `bruiser`.
-- `portrait` — repo-relative path to the PNG. File must exist.
+- `portrait` — repo-relative path to the portrait PNG. File must exist.
+- `icon` — repo-relative path to the hero's square icon PNG (the in-game hero-select icon). File must exist. Shares the portrait filename scheme under `hero_icons/`.
 - `color` — accent color as a `#RRGGBB` hex string. Curated per hero from the in-game/portrait palette. Used by client UIs that need a single hero-keyed color (e.g., hero-swap timelines, role bars).
 - `aliases` — strings commonly produced by OCR, alternate spellings, and accent-stripped forms. Used by `normalize_hero_name()` before falling back to fuzzy matching. Do **not** include `name` itself — the lookup table handles that.
 - `perks` — all perks the hero has *ever* had, including ones that have since been removed. At any given date, exactly 4 perks must be active (one per slot 1-4, slots 1-2 minor, slots 3-4 major). When a perk is removed and replaced, keep the old entry (set `removed_on`) and add the new entry (set `added_on`); both can share a slot as long as their active windows do not overlap. `slug` is unique within the hero (including historic perks — never reuse a slug).
@@ -139,6 +143,7 @@ Field rules:
 ## Asset conventions
 
 - **Hero portraits:** `hero_portraits/<slug-or-filename>.png`. The current filename scheme in both consumers uses the hero's display-name with punctuation stripped (`DVa.png`, `Soldier_76.png`, `Wrecking_Ball.png`, `Jetpack_Cat.png`, `Junker_Queen.png`). Preserve that scheme so nothing in MCP's templates has to change. The `portrait` field in `heroes.json` is the source of truth for the exact filename — do not hardcode the transformation in consumer code.
+- **Hero icons:** `hero_icons/<filename>.png`. Same filename scheme and basenames as `hero_portraits/` (one icon per hero, identical filename to the portrait). The `icon` field in `heroes.json` is the source of truth — do not hardcode the transformation in consumer code.
 - **Perk icons:** `perks/<hero_slug>/<perk_slug>.png`. Hero slug is the `slug` from `heroes.json`. Perk slug is the `slug` from the perk entry.
 - **Map backgrounds:** `map_backgrounds/<width>/<map_slug>.webp`, where `<width>` is one of `1920`, `1280`, `640`, `320` and the filename is the `background` field from `maps.json`. The same filename exists under all four width directories (smaller-than-target sources are not upscaled, so a few low-res maps have an unchanged image in the larger directories). Originals live in `map_backgrounds/_source/` and are **not** published. Regenerate variants with `scripts/process_map_backgrounds.py`; re-fetch sources with `scripts/fetch_map_backgrounds.py`.
 
@@ -165,6 +170,7 @@ export interface Hero {
   role: "tank" | "damage" | "support";
   subrole: string;
   portrait: string;
+  icon: string;         // repo-relative path; use assetPath() for absolute
   color: string;        // #RRGGBB accent
   aliases: string[];
   perks: Perk[];
@@ -214,7 +220,7 @@ Fuzzy matching (edit-distance fallback) stays in the **consumer** — Spotter's 
 ### Publishing
 
 - `package.json` field: `"publishConfig": { "registry": "https://npm.pkg.github.com" }`
-- `files` includes: `dist/`, `heroes.json`, `maps.json`, `hero_portraits/`, `perks/`, and the `map_backgrounds/` width directories (`_source/` excluded)
+- `files` includes: `dist/`, `heroes.json`, `maps.json`, `hero_portraits/`, `hero_icons/`, `perks/`, and the `map_backgrounds/` width directories (`_source/` excluded)
 - GitHub Actions workflow on tag push builds and publishes.
 
 ### Consuming in Spotter
@@ -245,7 +251,7 @@ from ow_data import (
     get_active_perks, get_perk, is_perk_active,  # perk lifecycle helpers
     map_background, MAP_BACKGROUND_WIDTHS,   # map background path helper
     asset_path,                             # pathlib.Path to packaged asset
-    hero_portraits_dir, perks_dir,          # pathlib.Path for Starlette mounts
+    hero_portraits_dir, hero_icons_dir, perks_dir,  # pathlib.Path for Starlette mounts
     map_backgrounds_dir,                    # pathlib.Path for Starlette mounts
 )
 ```
@@ -254,7 +260,7 @@ Use `importlib.resources.files("ow_data")` internally so the module works both i
 
 ### Publishing
 
-- `pyproject.toml` uses hatchling. Package data includes `heroes.json`, `maps.json`, `hero_portraits/**/*.png`, `perks/**/*.png`, `map_backgrounds/{1920,1280,640,320}/*.webp` (`_source/` excluded).
+- `pyproject.toml` uses hatchling. Package data includes `heroes.json`, `maps.json`, `hero_portraits/**/*.png`, `hero_icons/**/*.png`, `perks/**/*.png`, `map_backgrounds/{1920,1280,640,320}/*.webp` (`_source/` excluded).
 - Release workflow runs `python -m build`, attaches `ow_data-X.Y.Z-py3-none-any.whl` to the GitHub Release.
 
 ### Consuming in MCP

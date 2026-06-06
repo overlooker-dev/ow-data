@@ -23,6 +23,7 @@ interface Hero {
   role: string;
   subrole: string;
   portrait: string;
+  icon: string;
   color: string;
   aliases: string[];
   perks: Perk[];
@@ -55,6 +56,7 @@ const NEG_INF = "0000-00-00";
 const POS_INF = "9999-99-99";
 
 const referencedPortraits = new Set<string>();
+const referencedHeroIcons = new Set<string>();
 const referencedIcons = new Set<string>();
 
 const heroSlugs = new Set<string>();
@@ -70,6 +72,11 @@ for (const h of heroes) {
     err(`hero "${h.slug}": missing portrait file ${h.portrait}`);
   }
   referencedPortraits.add(h.portrait);
+
+  if (!existsSync(resolve(repoRoot, h.icon))) {
+    err(`hero "${h.slug}": missing icon file ${h.icon}`);
+  }
+  referencedHeroIcons.add(h.icon);
 
   if (!HEX_COLOR.test(h.color)) {
     err(`hero "${h.slug}": color "${h.color}" is not a #RRGGBB hex string`);
@@ -205,6 +212,15 @@ if (existsSync(portraitsDir)) {
   }
 }
 
+const heroIconsDir = resolve(repoRoot, "hero_icons");
+if (existsSync(heroIconsDir)) {
+  for (const f of readdirSync(heroIconsDir)) {
+    if (f.startsWith(".")) continue;
+    const rel = `hero_icons/${f}`;
+    if (!referencedHeroIcons.has(rel)) err(`orphan hero icon on disk: ${rel}`);
+  }
+}
+
 const perksDir = resolve(repoRoot, "perks");
 if (existsSync(perksDir)) {
   for (const heroDir of readdirSync(perksDir)) {
@@ -236,5 +252,5 @@ if (errors.length > 0) {
 }
 
 console.log(
-  `ok — ${heroes.length} heroes, ${maps.length} maps, ${referencedPortraits.size} portraits, ${referencedIcons.size} perk icons, ${referencedBackgrounds.size} map backgrounds`,
+  `ok — ${heroes.length} heroes, ${maps.length} maps, ${referencedPortraits.size} portraits, ${referencedHeroIcons.size} hero icons, ${referencedIcons.size} perk icons, ${referencedBackgrounds.size} map backgrounds`,
 );
