@@ -1,6 +1,6 @@
 {
   "name": "@overlooker-dev/ow-data",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Shared reference data for OverwatchSpotter and OverwatchStatsMCP: hero metadata, map list, portraits, perk icons.",
   "type": "module",
   "main": "./dist/index.js",

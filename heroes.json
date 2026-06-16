@@ -1420,6 +1420,46 @@
     ]
   },
   {
+    "name": "Shion",
+    "slug": "shion",
+    "role": "damage",
+    "subrole": "flanker",
+    "portrait": "hero_portraits/Shion.png",
+    "icon": "hero_icons/Shion.png",
+    "color": "#D93A45",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Rapid Reload",
+        "slug": "rapid_reload",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/shion/rapid_reload.png"
+      },
+      {
+        "name": "X Machina",
+        "slug": "x_machina",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/shion/x_machina.png"
+      },
+      {
+        "name": "Refuel",
+        "slug": "refuel",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/shion/refuel.png"
+      },
+      {
+        "name": "Faces of Death",
+        "slug": "faces_of_death",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/shion/faces_of_death.png"
+      }
+    ]
+  },
+  {
     "name": "Sierra",
     "slug": "sierra",
     "role": "damage",
