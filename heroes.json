@@ -174,7 +174,16 @@
         "slug": "armored_artillery",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/bastion/armored_artillery.png"
+        "icon": "perks/bastion/armored_artillery.png",
+        "removed_on": "2026-06-16"
+      },
+      {
+        "name": "Smart Bomb",
+        "slug": "smart_bomb",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/bastion/smart_bomb.png",
+        "added_on": "2026-06-16"
       },
       {
         "name": "Configuration Reload",
@@ -358,7 +367,16 @@
         "slug": "power_move",
         "tier": "major",
         "slot": 4,
-        "icon": "perks/domina/power_move.png"
+        "icon": "perks/domina/power_move.png",
+        "removed_on": "2026-06-16"
+      },
+      {
+        "name": "Corporate Retreat",
+        "slug": "corporate_retreat",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/domina/corporate_retreat.png",
+        "added_on": "2026-06-16"
       }
     ]
   },
@@ -615,9 +633,10 @@
       {
         "name": "Deep Leap",
         "slug": "deep_leap",
-        "tier": "minor",
-        "slot": 1,
-        "icon": "perks/hazard/deep_leap.png"
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/hazard/deep_leap.png",
+        "added_on": "2026-06-16"
       },
       {
         "name": "Anarchic Zeal",
@@ -629,9 +648,10 @@
       {
         "name": "Reconstitution",
         "slug": "reconstitution",
-        "tier": "major",
-        "slot": 3,
-        "icon": "perks/hazard/reconstitution.png"
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/hazard/reconstitution.png",
+        "added_on": "2026-06-16"
       },
       {
         "name": "Explosive Impalements",
