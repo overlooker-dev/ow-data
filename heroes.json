@@ -270,7 +270,8 @@
         "slug": "even_the_odds",
         "tier": "minor",
         "slot": 2,
-        "icon": "perks/cassidy/even_the_odds.png"
+        "icon": "perks/cassidy/even_the_odds.png",
+        "removed_on": "2026-08-11"
       },
       {
         "name": "Rollin' Round-Up",
@@ -285,6 +286,57 @@
         "tier": "major",
         "slot": 4,
         "icon": "perks/cassidy/silver_bullet.png"
+      },
+      {
+        "name": "Giddy Up",
+        "slug": "giddy_up",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/cassidy/giddy_up.png",
+        "added_on": "2026-08-11"
+      }
+    ]
+  },
+  {
+    "name": "D.Mon",
+    "slug": "dmon",
+    "role": "tank",
+    "subrole": "stalwart",
+    "portrait": "hero_portraits/DMon.png",
+    "icon": "hero_icons/DMon.png",
+    "color": "#6E4FBF",
+    "aliases": [
+      "DMon",
+      "D Mon"
+    ],
+    "perks": [
+      {
+        "name": "Beast Within",
+        "slug": "beast_within",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/dmon/beast_within.png"
+      },
+      {
+        "name": "MEKA Mobilitiy",
+        "slug": "meka_mobility",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/dmon/meka_mobility.png"
+      },
+      {
+        "name": "Overstrike",
+        "slug": "overstrike",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/dmon/overstrike.png"
+      },
+      {
+        "name": "Focused Fusion",
+        "slug": "focused_fusion",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/dmon/focused_fusion.png"
       }
     ]
   },
@@ -435,7 +487,8 @@
         "slug": "focused_rush",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/echo/focused_rush.png"
+        "icon": "perks/echo/focused_rush.png",
+        "removed_on": "2026-08-11"
       },
       {
         "name": "Partial Scan",
@@ -456,7 +509,24 @@
         "slug": "high_beams",
         "tier": "major",
         "slot": 4,
-        "icon": "perks/echo/high_beams.png"
+        "icon": "perks/echo/high_beams.png",
+        "removed_on": "2026-08-11"
+      },
+      {
+        "name": "Focused Rush",
+        "slug": "focused_rush_major",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/echo/focused_rush.png",
+        "added_on": "2026-08-11"
+      },
+      {
+        "name": "Aerial Munitions",
+        "slug": "aerial_munitions",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/echo/aerial_munitions.png",
+        "added_on": "2026-08-11"
       }
     ]
   },
@@ -734,7 +804,8 @@
         "slug": "headbutt",
         "tier": "major",
         "slot": 3,
-        "icon": "perks/jetpack_cat/headbutt.png"
+        "icon": "perks/jetpack_cat/headbutt.png",
+        "removed_on": "2026-08-11"
       },
       {
         "name": "Claws Out",
@@ -742,6 +813,14 @@
         "tier": "major",
         "slot": 4,
         "icon": "perks/jetpack_cat/claws_out.png"
+      },
+      {
+        "name": "Purrfect Form",
+        "slug": "purrfect_form",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/jetpack_cat/purrfect_form.png",
+        "added_on": "2026-08-11"
       }
     ]
   },
@@ -1228,7 +1307,8 @@
         "slug": "charged_javelin",
         "tier": "major",
         "slot": 3,
-        "icon": "perks/orisa/charged_javelin.png"
+        "icon": "perks/orisa/charged_javelin.png",
+        "removed_on": "2026-08-11"
       },
       {
         "name": "Protective Barrier",
@@ -1236,6 +1316,14 @@
         "tier": "major",
         "slot": 4,
         "icon": "perks/orisa/protective_barrier.png"
+      },
+      {
+        "name": "Heavy Javelin",
+        "slug": "heavy_javelin",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/orisa/heavy_javelin.png",
+        "added_on": "2026-08-11"
       }
     ]
   },
@@ -1781,7 +1869,8 @@
         "slug": "chronal_dash",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/tracer/chronal_dash.png"
+        "icon": "perks/tracer/chronal_dash.png",
+        "removed_on": "2026-08-11"
       },
       {
         "name": "Kinetic Reload",
@@ -1803,6 +1892,14 @@
         "tier": "major",
         "slot": 4,
         "icon": "perks/tracer/quantum_entanglement.png"
+      },
+      {
+        "name": "Temporal Regen",
+        "slug": "temporal_regen",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/tracer/temporal_regen.png",
+        "added_on": "2026-08-11"
       }
     ]
   },
