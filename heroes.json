@@ -14,7 +14,16 @@
         "slug": "groggy",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/ana/groggy.png"
+        "icon": "perks/ana/groggy.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Local Anesthetic",
+        "slug": "local_anesthetic",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/ana/local_anesthetic.png",
+        "added_on": "2026-10-06"
       },
       {
         "name": "Speed Serum",
@@ -380,6 +389,46 @@
         "tier": "major",
         "slot": 4,
         "icon": "perks/dva/precision_fusion.png"
+      }
+    ]
+  },
+  {
+    "name": "Doctrine",
+    "slug": "doctrine",
+    "role": "support",
+    "subrole": "survivor",
+    "portrait": "hero_portraits/Doctrine.png",
+    "icon": "hero_icons/Doctrine.png",
+    "color": "#D1166F",
+    "aliases": [],
+    "perks": [
+      {
+        "name": "Saving Grace",
+        "slug": "saving_grace",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/doctrine/saving_grace.png"
+      },
+      {
+        "name": "Sanguine Siphon",
+        "slug": "sanguine_siphon",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/doctrine/sanguine_siphon.png"
+      },
+      {
+        "name": "Transfusion",
+        "slug": "transfusion",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/doctrine/transfusion.png"
+      },
+      {
+        "name": "Cost of Life",
+        "slug": "cost_of_life",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/doctrine/cost_of_life.png"
       }
     ]
   },
@@ -1509,7 +1558,16 @@
         "slug": "shrapnel_launcher",
         "tier": "minor",
         "slot": 2,
-        "icon": "perks/roadhog/shrapnel_launcher.png"
+        "icon": "perks/roadhog/shrapnel_launcher.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Here, Piggy Piggy",
+        "slug": "here_piggy_piggy",
+        "tier": "minor",
+        "slot": 2,
+        "icon": "perks/roadhog/here_piggy_piggy.png",
+        "added_on": "2026-10-06"
       },
       {
         "name": "Hogdrogen Exposure",
@@ -1523,7 +1581,16 @@
         "slug": "pulled_pork",
         "tier": "major",
         "slot": 4,
-        "icon": "perks/roadhog/pulled_pork.png"
+        "icon": "perks/roadhog/pulled_pork.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Toxic Exhaust",
+        "slug": "toxic_exhaust",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/roadhog/toxic_exhaust.png",
+        "added_on": "2026-10-06"
       }
     ]
   },
@@ -1542,7 +1609,16 @@
         "slug": "rapid_reload",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/shion/rapid_reload.png"
+        "icon": "perks/shion/rapid_reload.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Survival Instinct",
+        "slug": "survival_instinct",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/shion/survival_instinct.png",
+        "added_on": "2026-10-06"
       },
       {
         "name": "X Machina",
@@ -1735,8 +1811,8 @@
   {
     "name": "Sombra",
     "slug": "sombra",
-    "role": "damage",
-    "subrole": "recon",
+    "role": "support",
+    "subrole": "tactician",
     "portrait": "hero_portraits/Sombra.png",
     "icon": "hero_icons/Sombra.png",
     "color": "#7A3FA8",
@@ -1747,7 +1823,16 @@
         "slug": "encrypted_upload",
         "tier": "minor",
         "slot": 1,
-        "icon": "perks/sombra/encrypted_upload.png"
+        "icon": "perks/sombra/encrypted_upload.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Life Hack",
+        "slug": "life_hack",
+        "tier": "minor",
+        "slot": 1,
+        "icon": "perks/sombra/life_hack.png",
+        "added_on": "2026-10-06"
       },
       {
         "name": "CTRL ALT ESC",
@@ -1761,14 +1846,32 @@
         "slug": "high_speed_bandwidth",
         "tier": "major",
         "slot": 3,
-        "icon": "perks/sombra/high_speed_bandwidth.png"
+        "icon": "perks/sombra/high_speed_bandwidth.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Data Packet",
+        "slug": "data_packet",
+        "tier": "major",
+        "slot": 3,
+        "icon": "perks/sombra/data_packet.png",
+        "added_on": "2026-10-06"
       },
       {
         "name": "Viral Replication",
         "slug": "viral_replication",
         "tier": "major",
         "slot": 4,
-        "icon": "perks/sombra/viral_replication.png"
+        "icon": "perks/sombra/viral_replication.png",
+        "removed_on": "2026-10-06"
+      },
+      {
+        "name": "Cybersecurity",
+        "slug": "cybersecurity",
+        "tier": "major",
+        "slot": 4,
+        "icon": "perks/sombra/cybersecurity.png",
+        "added_on": "2026-10-06"
       }
     ]
   },

@@ -58,6 +58,7 @@
   { "name": "Tutorial", "mode": "training", "aliases": [], "background": "tutorial.webp" },
   { "name": "Volskaya Industries", "mode": "assault", "aliases": [], "background": "volskaya_industries.webp" },
   { "name": "Watchpoint: Gibraltar", "mode": "escort", "aliases": ["Watchpoint Gibraltar"], "background": "watchpoint_gibraltar.webp" },
+  { "name": "Watchpoint: Grímsvötn", "mode": "escort", "aliases": ["Watchpoint Grimsvotn", "Watchpoint: Grimsvotn", "Watchpoint: Grimsvötn", "Grímsvötn", "Grimsvotn"], "background": "watchpoint_grimsvotn.webp" },
   { "name": "Workshop Chamber", "mode": "workshop", "aliases": [], "background": "workshop_chamber.webp" },
   { "name": "Workshop Expanse", "mode": "workshop", "aliases": [], "background": "workshop_expanse.webp" },
   { "name": "Workshop Green Screen", "mode": "workshop", "aliases": [], "background": "workshop_green_screen.webp" },
